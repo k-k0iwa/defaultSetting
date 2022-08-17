@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include tab {
+    min-height: 100vh;
+  }
+
+  &.is-ie {
+    min-height: auto;
+    height: 100%;
+  }
+}
+
+body {
+  font-size: $fontSizeSp14;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  line-height: 1.6;
+  word-break: break-all;
+  text-size-adjust: 100%;
+  color: $baseFontColor;
+  border-top: 5px solid $blackColor2;
+  background-color: $bgColor;
+
+  @include tab {
+    min-height: 100vh;
+    font-size: $fontSizePc16;
+  }
+
+  .is-ie & {
+    min-height: auto;
+    height: 100%;
+  }
+}
+
+header, footer, nav, section, article, aside, figure, picture {
+  display: block;
+}
+
+p, ul, ol, dl, table {
+  margin-top: calc(20 / 600 * 100vw);
+
+  @include tab {
+    margin-top: 20px;
+  }
+}
+
+p + p {
+  margin-top: calc(15 / 600 * 100vw);
+
+  @include tab {
+    margin-top: 10px;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+li, dd {
+  margin-top: .5em;
+}
+
+dd > *:first-child, th > *:first-child, td > *:first-child {
+  margin-top: 0;
+}
+
+// strong {}
+
+em, b {
+  font-weight: bold;
+}
+
+em, dfn {
+  font-style: normal;
+}
+
+sup, sub {
+  position: relative;
+  font-size: 70%;
+}
+sup {
+  top: -.6em;
+}
+sub {
+  bottom: 0;
+}
+
+a {
+  color: $baseFontColor;
+  text-decoration: underline;
+
+  @include tab {
+    transition: .3s ease;
+
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}

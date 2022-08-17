@@ -1,0 +1,80 @@
+/*--------------------------------
+  Col2
+--------------------------------*/
+.c-col {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+
+    ._col2 &__item {
+      margin: 0 20px 0 0;
+      width: calc((100% - 20px) / 2);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item > *:first-child {
+    margin-top: 0;
+  }
+}
+
+/*--------------------------------
+  Col3
+--------------------------------*/
+.c-col {
+  display: flex;
+  flex-wrap: wrap;
+  ._col3 &__item {
+    margin: 0 20px 0 0;
+    width: calc((100% - 20px) / 2);
+
+    @include sp {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include tab {
+      width: calc((100% - 20px * 2) / 3);
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+/*--------------------------------
+  Col4
+--------------------------------*/
+.c-col {
+  display: flex;
+  flex-wrap: wrap;
+  ._col4 &__item {
+    margin: 0 20px 0 0;
+    width: calc((100% - 20px) / 2);
+
+    @include sp {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @include tab {
+      width: calc((100% - 20px * 3) / 4);
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.l-main {
+  margin: 15px auto;
+  padding: 30px;
+  width: 100%;
+  max-width: $pcContentsWidth;
+  min-width: $viewMinWidth;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $whiteColor;
+  @include pc {
+    margin: 50px auto;
+    padding: 30px 60px;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}

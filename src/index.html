@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<title>案件参画時の環境設定</title>
+<meta name="description" content="新しい案件に参入した際のコーダー用PC設定内容">
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <div class="l-container">
+    <header class="l-header">
+      <h1 class="mod-h1">環境設定</h1>
+    </header>
+
+    <nav class="l-nav">
+      <ul class="l-nav-list">
+        <li class="l-nav-list__item">
+          <a href="#anc-tool" class="l-nav-list__item__anc">ツール準備</a>
+        </li>
+        <li class="l-nav-list__item">
+          <a href="#anc-bookmark" class="l-nav-list__item__anc">ブックマーク</a>
+        </li>
+        <li class="l-nav-list__item">
+          <a href="#anc-extensions" class="l-nav-list__item__anc">Chrome拡張機能</a>
+        </li>
+        <li class="l-nav-list__item">
+          <a href="#anc-tips" class="l-nav-list__item__anc">Tips</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div>★Gulpの内容を詳細にする</div>
+    <div>★Googleガイドラインの内容を掲載する？別ページで作って非同期でページ遷移させる？</div>
+
+
+    <main class="l-main">
+      <section id="anc-tool" class="mod-sec">
+        <h2 class="mod-h2">ツール準備</h2>
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">コミュニケーションツール</h3>
+          <p>現場で必要なツールをダウンロードする</p>
+          <ul class="c-list-link">
+            <li><a href="https://www.microsoft.com/ja-jp/microsoft-teams/group-chat-software" target="_blank" rel="nofollow noopener">Teams</a></li>
+            <li><a href="https://slack.com/intl/ja-jp/" target="_blank" rel="nofollow noopener">Slack</a></li>
+            <li><a href="https://explore.zoom.us/ja/products/meetings/" target="_blank" rel="nofollow noopener">Zoom</a></li>
+          </ul>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">エディタ</h3>
+          <p>使い慣れたエディタをダウンロードし、設定を行う</p>
+          <ul class="c-list-link">
+            <li><a href="https://azure.microsoft.com/ja-jp/products/visual-studio-code/" target="_blank" rel="nofollow noopener">Visual Studio Code</a></li>
+            <li><a href="https://atom.io/" target="_blank" rel="nofollow noopener">Atom</a></li>
+          </ul>
+
+          <dl class="c-acc">
+            <div class="c-acc__item">
+              <dt class="c-acc__item__hdg">
+                <button class="c-acc-trigger js-acc-trigger" type="button">VS code 拡張機能例</button>
+              </dt>
+              <dd id="acc-vscode" class="c-acc__item__body">
+                <ul class="c-list-panel">
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-ja" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Japanese Language Pack for VS Code</p>
+                        <p class="c-list-panel-txt__txt">VS Codeを日本語化する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/jlp.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Live Server</p>
+                        <p class="c-list-panel-txt__txt">ローカルサーバーを立ち上げ、変更をリアルタイムでブラウザに反映する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/liveserver.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Material Icon Theme</p>
+                        <p class="c-list-panel-txt__txt">フォルダやファイルのアイコンを変更する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/materialicon.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=ionutvmi.path-autocomplete" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Path Autocomplete</p>
+                        <p class="c-list-panel-txt__txt">imgなどのパス入力中にワークスペース内のディレクトリ名やファイル名を予測で出す</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/pathauto.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Auto Rename Tag</p>
+                        <p class="c-list-panel-txt__txt">ペアになっている開始タグと終了タグ名を同時編集できる</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/autorename.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">indent-rainbow</p>
+                        <p class="c-list-panel-txt__txt">インデントを色分けし、階層の違いが視認しやすくなる</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/indentrainbow.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=vincaslt.highlight-matching-tag" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Highlight Matching Tag</p>
+                        <p class="c-list-panel-txt__txt">開始タグと終了タグにアンダーラインで目印をつける</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/highlighttag.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=mosapride.zenkaku" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">zenkaku</p>
+                        <p class="c-list-panel-txt__txt">全角スペースを可視化する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/zenkaku.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">Code Spell Checker</p>
+                        <p class="c-list-panel-txt__txt">英単語のミスを指摘する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/spellcheck.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">IntelliSense for CSS class names in HTML</p>
+                        <p class="c-list-panel-txt__txt">HTMLにクラスを記入するとき、CSSにあるクラス名を表示する</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/classnames.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <li class="c-list-panel__item">
+                    <a href="https://marketplace.visualstudio.com/items?itemName=pranaygp.vscode-css-peek" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">CSS Peek</p>
+                        <p class="c-list-panel-txt__txt">HTML要素のクラス名やID名から、該当箇所のCSSコードを表示したり開いたりできる</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/vscode/csspeek.webp" alt=""></div>
+                    </a>
+                  </li>
+                  <!-- <li class="c-list-panel__item">
+                    <a href="リンク" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+                      <div class="c-list-panel-txt">
+                        <p class="c-list-panel-txt__ttl">タイトル</p>
+                        <p class="c-list-panel-txt__txt">内容</p>
+                      </div>
+                      <div class="c-list-panel-img"><img src="./assets/images/bookmark/パス.webp" alt=""></div>
+                    </a>
+                  </li> -->
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">Adobe製品</h3>
+          <p>Photoshop、Illustrator、XD、Acrobat DCなど必要なものをダウンロード</p>
+
+          <dl class="c-acc">
+            <div class="c-acc__item">
+              <dt class="c-acc__item__hdg">
+                <button class="c-acc-trigger js-acc-trigger" type="button">Photoshopの初期設定例</button>
+              </dt>
+              <dd id="acc-Photoshop" class="c-acc__item__body">
+                <ul class="c-list-disc">
+                  <li>［環境設定 &lt; 単位・定規 &lt; 定規と文字］を「pixel」にする</li>
+                  <li>ワークスペースのカスタマイズ（文字・プロパティ・ヒストリー・レイヤーなど）</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">ツール</h3>
+          <p>使用頻度の高いツールをダウンロードする</p>
+          <ul class="c-list-link">
+            <li><a href="https://winmergejp.bitbucket.io/" target="_blank" rel="nofollow noopener">WinMerge</a></li>
+            <li><a href="https://forest.watch.impress.co.jp/library/software/winscp/" target="_blank" rel="nofollow noopener">WinSCP</a></li>
+          </ul>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">ブラウザ</h3>
+          <p>デフォルトでマシンに入っていないものはダウンロードし、必要なブラウザの設定を行う</p>
+          <ul class="c-list-link">
+            <li><a href="https://www.google.com/intl/ja_jp/chrome/" target="_blank" rel="nofollow noopener">Chrome</a></li>
+            <li><a href="https://www.mozilla.org/ja/firefox/new/" target="_blank" rel="nofollow noopener">Firefox</a></li>
+            <li><a href="https://www.microsoft.com/ja-jp/edge" target="_blank" rel="nofollow noopener">Edge</a></li>
+          </ul>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">作業フォルダの作成</h3>
+          <p>作業専用のフォルダをどこに作成するか確認する。<br>会社によってはPCのデスクトップへの保存を禁止していたり、OneDriveなどへファイルを保存する決まり等があるのでルールに則り作業フォルダを作成する。</p>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">Node.js</h3>
+          <div class="c-link"><a href="https://nodejs.org/ja/" target="_blank" rel="nofollow noopener">Node.js</a></div>
+          <p>インストールが完了したらバージョンチェック（node -v）</p>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">Git</h3>
+          <dl class="c-dl">
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">1.インストーラのダウンロード&amp;実行</dt>
+              <dd class="c-dl__item__dd">
+                <p>環境に合ったインストーラを選択し、ダウンロードする。ダウンロードが完了したら、インストーラを実行しセットアップを行う。</p>
+                <div class="c-link"><a href="https://git-scm.com/downloads" target="_blank" rel="nofollow noopener">Git</a></div>
+
+                <dl class="c-acc">
+                  <div class="c-acc__item">
+                    <dt class="c-acc__item__hdg">
+                      <button class="c-acc-trigger js-acc-trigger" type="button">Select Componentsの設定補足</button>
+                    </dt>
+                    <dd id="acc-git1-01" class="c-acc__item__body">
+                      <dl class="c-dl">
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Additional Icons- On the Desktop</dt>
+                          <dd class="c-dl__item__dd">Git Bashのショートカットをデスクトップに置く</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Windows Explorer Integration</dt>
+                          <dd class="c-dl__item__dd">右クリックした時に出てくるメニューについての設定。チェックを入れるとメニューに「Git Bush」や「Git GUI」が追加される</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Associate .git* configration files with the default text editor</dt>
+                          <dd class="c-dl__item__dd">「.git」でファイルをデフォルトのテキストエディターと関連付ける</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Associate .sh files to be run with Bash</dt>
+                          <dd class="c-dl__item__dd">「.sh」ファイルをGit Bashで実行するように設定する</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Use a TrueType font in all console windows</dt>
+                          <dd class="c-dl__item__dd">コンソールで「TrueType フォント」を使うかどうか設定する。これをチェックすると日本語が文字化けするので、できればチェックしない方が良い</dd>
+                        </div>
+                      </dl>
+                    </dd>
+                  </div>
+                  <div class="c-acc__item">
+                    <dt class="c-acc__item__hdg">
+                      <button class="c-acc-trigger js-acc-trigger" type="button">環境変数の設定補足</button>
+                    </dt>
+                    <dd id="acc-git1-02" class="c-acc__item__body">
+                      <dl class="c-dl">
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Use Git Bash only</dt>
+                          <dd class="c-dl__item__dd">Git Bashのみでgitコマンドを使う場合にこちらを選択。Windowsの環境変数「PATH」は変更されない</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Use Git from the Windows Command Prompt</dt>
+                          <dd class="c-dl__item__dd">WindowsのコマンドプロンプトからGitコマンドを実行する場合はこちらを選択。Windowsの環境変数「PATH」が更新される</dd>
+                        </div>
+                        <div class="c-dl__item">
+                          <dt class="c-dl__item__dt">Use Git and optional Unix tools from the Windows Command Prompt</dt>
+                          <dd class="c-dl__item__dd">Windowsのコマンドプロンプト + Unix系コマンドを使用する場合にこちらを選択。Windowsの環境変数「PATH」が更新される</dd>
+                        </div>
+                      </dl>
+                    </dd>
+                  </div>
+                </dl>
+              </dd>
+            </div>
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">2.インストールの確認</dt>
+              <dd class="c-dl__item__dd">
+                <pre><code>git --version</code></pre>
+              </dd>
+            </div>
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">3.初期設定</dt>
+              <dd class="c-dl__item__dd">
+                <p>Git Bashを起動してユーザ名とメールアドレスを設定する。</p>
+                <pre><code>git config --global user.name "ユーザ名"</code></pre>
+                <pre><code>git config --global user.email "メールアドレス"</code></pre>
+              </dd>
+            </div>
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">4.設定内容の確認</dt>
+              <dd class="c-dl__item__dd">
+                <pre><code>git config user.name</code></pre>
+                <pre><code>git config user.email</code></pre>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <!-- <section class="mod-sec__nest">
+          <h3 class="mod-h3"></h3>
+        </section> -->
+      </section>
+
+      <section id="anc-bookmark" class="mod-sec">
+        <h2 class="mod-h2">ブックマーク</h2>
+        <ul class="c-list-panel">
+          <li class="c-list-panel__item">
+            <a href="https://validator.w3.org/nu/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Html Checker</p>
+                <p class="c-list-panel-txt__txt">W3Cのマークアップ検証</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/htmlcheck.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://jigsaw.w3.org/css-validator/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">CSS W3C validators</p>
+                <p class="c-list-panel-txt__txt">W3CのCSS検証</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/csscheck.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://pagespeed.web.dev/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">PageSpeed Insights</p>
+                <p class="c-list-panel-txt__txt">モバイル、PCそれぞれのページ表示速度やパフォーマンス検証</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/pagespeed.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://caniuse.com/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Can I use</p>
+                <p class="c-list-panel-txt__txt">HTMLやCSSのプロパティごとのブラウザ対応状況を確認</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/caniuse.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://difff.jp/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">difff《ﾃﾞｭﾌﾌ》</p>
+                <p class="c-list-panel-txt__txt">テキスト比較ツール<br>WinMergeだと差分とされる余白が無視されるのでWinMergeで差分が見にくい時に便利</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/difff.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://placehold.jp/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">placehold.jp</p>
+                <p class="c-list-panel-txt__txt">ダミー画像を生成</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/placehold.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://squoosh.app/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Squoosh</p>
+                <p class="c-list-panel-txt__txt">Googleが提供するブラウザ上で画像の圧縮ができるサービス<br><em>※情報公開前の内容が含まれる画像等使用に適さない画像はオンラインでの圧縮を避けてください</em></p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/squoosh.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://www.peko-step.com/tool/datauri.html" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">PEKO STEP</p>
+                <p class="c-list-panel-txt__txt">画像をdata URIに変換するツール</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/pekostep.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://www.marbacka.net/msearch/tool.php" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Unicode文字ツール</p>
+                <p class="c-list-panel-txt__txt">JSで日本語の文字化けを回避するエンコードツール</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/unicodejs.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://webllica.com/css-content-property-mojibake/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">CSS Unicode変換</p>
+                <p class="c-list-panel-txt__txt">contentプロパティで日本語の文字化けを回避するUnicode変換ツール</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/unicodecss.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://devroom.azurewebsites.net/Devtools/HtmlEncode" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">テキストのHTMLエンコード／デコード</p>
+                <p class="c-list-panel-txt__txt">code要素でHTMLエンコードが必要な場合に使える</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/encode.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="http://lopan.jp/about-svg/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">SVG書き出し方法</p>
+                <p class="c-list-panel-txt__txt">書き出したSVGがおかしい時に書きだし方を見直す</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/bookmark/svgexport.webp" alt=""></div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section id="anc-extensions" class="mod-sec">
+        <h2 class="mod-h2">Chrome拡張機能</h2>
+        <ul class="c-list-panel">
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/html%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%81%E3%82%A7%E3%83%83%E3%82%AB%E3%83%BC/ohdllebchmmponnofchalfkegpjojcaf" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">HTMLエラーチェッカー</p>
+                <p class="c-list-panel-txt__txt">HTMLの開始・終了タグの過不足などを検出する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/htmlcheck.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/check-my-links/ojkcdipcgfaekbeaelaapakgnjflfglf" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Check My Links</p>
+                <p class="c-list-panel-txt__txt">リンク切れを探す</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/linkcheck.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/alt-meta-viewer/jjcjblcbnjhgjlnclhficglfjedhpjhl" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Alt &amp; Meta viewer</p>
+                <p class="c-list-panel-txt__txt">AltまたはTitle属性をツールチップで表示する。また、ヘッダのTitle、Meta情報を一覧表示させる</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/altmeta.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/html5-outliner/afoibpobokebhgfnknfndkgemglggomo" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">HTML5 Outliner</p>
+                <p class="c-list-panel-txt__txt">見出しとセクショニング要素でナビゲート可能なページアウトラインを生成する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/outliner.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Wappalyzer</p>
+                <p class="c-list-panel-txt__txt">表示中のWebページで利用されているソフトウェアやサービス、フレームワークなどを一覧表示する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/wappalyzer.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/fonts-ninja/eljapbgkmlngdpckoiiibecpemleclhh" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Fonts Ninja</p>
+                <p class="c-list-panel-txt__txt">Webサイトで使われているフォントを確認する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/fontninja.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/hex-color-picker/eamkimleiebmdpifljjfilhbaehclahg/related?hl=ja" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">16進カラーピッカー</p>
+                <p class="c-list-panel-txt__txt">スポイトでブラウザ上の色を読み取り、カラーコードを表示する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/colorpicker.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/the-qr-code-extension/oijdcdmnjjgnnhgljmhkjlablaejfeeb" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">The QR Code Extension</p>
+                <p class="c-list-panel-txt__txt">ページのQRコードを生成する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/qrcode.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/pasty/hdjihnnclpjhfdbbinmgoiehhoehhlgf" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">Pasty</p>
+                <p class="c-list-panel-txt__txt">複数リンクを一気に開く</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/pasty.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">PerfectPixel</p>
+                <p class="c-list-panel-txt__txt">ブラウザ上に透過したデザインカンプを重ねて表示する</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/perfectpixel.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/deepl-translate-beta-vers/cofdbpoegempjloogbagkncekinflcnj/related?hl=ja" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">DeepL翻訳</p>
+                <p class="c-list-panel-txt__txt">Google翻訳よりも精度の高い翻訳ツール</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/deepl.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/crxmouse-chrome-gestures/jlgkpaicikihijadgifklkbpdajbkhjo" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">CrxMouse</p>
+                <p class="c-list-panel-txt__txt">マウスジェスチャーツール</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/crxmouse.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">OneTab</p>
+                <p class="c-list-panel-txt__txt">開いているタブを1つのタブにまとめる</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/onetab.webp" alt=""></div>
+            </a>
+          </li>
+          <li class="c-list-panel__item">
+            <a href="https://chrome.google.com/webstore/detail/css-peeper/mbnbehikldjhnfehhnaidhjhoofhpehk/related?hl=ja" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">CSS Peeper</p>
+                <p class="c-list-panel-txt__txt">フォント名、Webサイト内の配色、要素サイズなどが確認できる</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/csspeeper.webp" alt=""></div>
+            </a>
+          </li>
+          <!-- <li class="c-list-panel__item">
+            <a href="リンク" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
+              <div class="c-list-panel-txt">
+                <p class="c-list-panel-txt__ttl">タイトル</p>
+                <p class="c-list-panel-txt__txt">内容</p>
+              </div>
+              <div class="c-list-panel-img"><img src="./assets/images/expanded/パス.webp" alt=""></div>
+            </a>
+          </li> -->
+        </ul>
+      </section>
+
+      <section id="anc-tips" class="mod-sec">
+        <h2 class="mod-h2">Tips</h2>
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">Gulp</h3>
+          <dl class="c-dl">
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">1.インストール</dt>
+              <dd class="c-dl__item__dd">
+                <p>案件フォルダに移動してGulpをインストール</p>
+                <pre><code>npm install gulp -g</code></pre>
+              </dd>
+            </div>
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">2.必要なパッケージをインストール</dt>
+              <dd class="c-dl__item__dd">
+                <p>package.jsonを案件フォルダ内に保持している状態でコマンドを実行すると、package.json内に記載されているものが「node_modules」配下にインストールされる</p>
+                <pre><code>npm install</code></pre>
+              </dd>
+            </div>
+            <div class="c-dl__item">
+              <dt class="c-dl__item__dt">3.各種設定</dt>
+              <dd class="c-dl__item__dd">scssや画像圧縮/Webp変換など必要な環境準備</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">コマンド一覧</h3>
+          <div class="c-tab js-tab">
+            <ul class="c-tab__nav js-tab__nav">
+              <li class="c-tab__nav__item is-current">
+                <a href="#tab-command01" class="c-tab__nav__item__inner">Git</a>
+              </li>
+              <li class="c-tab__nav__item">
+                <a href="#tab-command02" class="c-tab__nav__item__inner">コマンドプロンプト</a>
+              </li>
+              <li class="c-tab__nav__item">
+                <a href="#tab-command03" class="c-tab__nav__item__inner">共通</a>
+              </li>
+              <li class="c-tab__nav__item">
+                <a href="#tab-command04" class="c-tab__nav__item__inner">入力補助</a>
+              </li>
+            </ul>
+            <div class="c-tab__body">
+              <div id="tab-command01" class="c-tab__body__item is-current">
+                <div class="c-tbl-scroll">
+                  <table class="c-tbl">
+                    <colgroup>
+                      <col class="u-w30">
+                      <col class="u-w70">
+                    </colgroup>
+                    <thead class="c-tbl__head">
+                      <tr>
+                        <th class="c-tbl__item">コマンド</th>
+                        <th class="c-tbl__item">説明</th>
+                      </tr>
+                    </thead>
+                    <tbody class="c-tbl__body">
+                      <tr>
+                        <th class="c-tbl__item">git version</th>
+                        <td class="c-tbl__item">Gitのバージョンを出力する</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git clone</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git clone {リポジトリのURL}</dt>
+                              <dd class="c-dl__item__dd">対象リポジトリのデフォルトブランチをクローンする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git clone -b {ブランチ名} {リポジトリのURL}</dt>
+                              <dd class="c-dl__item__dd">対象リポジトリの対象ブランチをクローンする</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git remote</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git remote</dt>
+                              <dd class="c-dl__item__dd">リモートリポジトリの一覧を出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git remote add {リモートリポジトリ名} {リポジトリのURL}</dt>
+                              <dd class="c-dl__item__dd">対象リポジトリをローカルのリモートリポジトリに追加する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git remote rename {旧リモートリポジトリ名} {新リモートリポジトリ名}</dt>
+                              <dd class="c-dl__item__dd">ローカルの対象リモートリポジトリをリネームする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git remote remove {リモートリポジトリ名}</dt>
+                              <dd class="c-dl__item__dd">対象リモートリポジトリをローカルから削除する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git branch</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch</dt>
+                              <dd class="c-dl__item__dd">ローカルブランチの一覧を出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch -a</dt>
+                              <dd class="c-dl__item__dd">ローカルブランチとリモートブランチの一覧を出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch {ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチを新規作成する（チェックアウトしない）</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch -d {ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチを削除する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch -d -f {ブランチ名}<br>git branch -D {ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチを強制削除する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git branch -m {旧ブランチ名} {新ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチをリネームする</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git switch</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git switch {ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチに切り替える</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git switch -c {ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ブランチを新規作成し、切り替える</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git switch --detach refs/tags/{タグ名}</dt>
+                              <dd class="c-dl__item__dd">対象タグに切り替える</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git restore</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git restore {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">ワークツリーにある対象ファイルの変更を取り消す</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git restore .</dt>
+                              <dd class="c-dl__item__dd">ワークツリーにある全ファイルの変更を取り消す</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git restore --source {コミットID} {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">対象ファイルの変更を対象コミットに戻す</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git diff</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git diff</dt>
+                              <dd class="c-dl__item__dd">ワークツリーにあるファイルの差分を出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git diff --cached</dt>
+                              <dd class="c-dl__item__dd">インデックスにあるファイルの差分を出力する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git status</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git status</dt>
+                              <dd class="c-dl__item__dd">変更したファイルの一覧を出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git status -s</dt>
+                              <dd class="c-dl__item__dd">git statusを短い形式で出力する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git status -s -b</dt>
+                              <dd class="c-dl__item__dd">短い形式でもブランチとトラッキングを出力する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git add</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git add {ファイルパス1} {ファイルパス2}...</dt>
+                              <dd class="c-dl__item__dd">対象ファイルをインデックス（コミット対象）に追加する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git add -A</dt>
+                              <dd class="c-dl__item__dd">変更した全ファイルをインデックスに追加する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git add -p {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">対象ファイルをハンク単位でインデックスに追加する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git reset HEAD</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git reset HEAD {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">ステージングにある対象ファイルをワークツリーに戻す（git add {ファイルパス} を取り消す）</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git reset HEAD</dt>
+                              <dd class="c-dl__item__dd">ステージングにある全ファイルをワークツリーに戻す（git add -A を取り消す）</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git commit</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git commit</dt>
+                              <dd class="c-dl__item__dd">指定したエディタでメッセージを書き、インデックスにある全ファイルをコミットする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git commit -m "{メッセージ}"</dt>
+                              <dd class="c-dl__item__dd">メッセージを付け、インデックスにある全ファイルをコミットする</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git push</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git push origin {ローカルブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象ローカルブランチをoriginにプッシュする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git push -d origin {リモートブランチ名}</dt>
+                              <dd class="c-dl__item__dd">対象リモートブランチをoriginから削除する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git push origin {タグ名}</dt>
+                              <dd class="c-dl__item__dd">対象タグをoriginにプッシュする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git push -d origin {タグ名}</dt>
+                              <dd class="c-dl__item__dd">対象タグをoriginから削除する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git fetch</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git fetch origin</dt>
+                              <dd class="c-dl__item__dd">originから最新の履歴を取得する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git fetch --prune origin</dt>
+                              <dd class="c-dl__item__dd">リモートリポジトリ上に存在しなくなったブランチなどの参照を削除し、originから最新の履歴を取得する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git merge</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git merge origin/{ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">originにある対象ブランチを、チェックアウト中のブランチへマージする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git merge --squash origin/{ブランチ名}</dt>
+                              <dd class="c-dl__item__dd">originにある対象ブランチのコミットをひとつにまとめ、チェックアウト中のブランチへマージする</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git log</th>
+                        <td class="c-tbl__item">ログを出力する</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git blame {ファイルパス}</th>
+                        <td class="c-tbl__item">対象ファイル全体の各行ごとに、最後に編集したリビジョンと作者を表示する</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git show {コミットID}</th>
+                        <td class="c-tbl__item">対象コミットのメッセージとテキストの差分を表示する</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git rm</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git rm {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">対象ファイルを削除し、Gitの管理外にする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git rm --cached {ファイルパス}</dt>
+                              <dd class="c-dl__item__dd">対象ファイルを削除せず、Gitの管理外にする</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git rm -r {フォルダパス}</dt>
+                              <dd class="c-dl__item__dd">対象フォルダ以下を全削除し、Gitの管理外にする</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git init</th>
+                        <td class="c-tbl__item">空のGitリポジトリを作成する</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git mv</th>
+                        <td class="c-tbl__item">
+                          <dl class="c-dl">
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git mv {ファイル名} {移動先ディレクトリ名}</dt>
+                              <dd class="c-dl__item__dd">ファイルを移動する</dd>
+                            </div>
+                            <div class="c-dl__item">
+                              <dt class="c-dl__item__dt">git mv {旧ファイル名} {新ファイル名}</dt>
+                              <dd class="c-dl__item__dd">ファイル名を変更する</dd>
+                            </div>
+                          </dl>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">git pull {リモート名} {ブランチ名}</th>
+                        <td class="c-tbl__item">
+                          <p>リモートリポジトリのデータを取得する</p>
+                          <p>リモート名：origin ブランチ名：masterの場合、git pull origin master</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="tab-command02" class="c-tab__body__item">
+                <div class="c-tbl-scroll">
+                  <table class="c-tbl">
+                    <colgroup>
+                      <col class="u-w30">
+                      <col class="u-w70">
+                    </colgroup>
+                    <thead class="c-tbl__head">
+                      <tr>
+                        <th class="c-tbl__item">コマンド</th>
+                        <th class="c-tbl__item">説明</th>
+                      </tr>
+                    </thead>
+                    <tbody class="c-tbl__body">
+                      <tr>
+                        <th class="c-tbl__item">cd + ディレクトリ</th>
+                        <td class="c-tbl__item">ディレクトリ移動</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">tree</th>
+                        <td class="c-tbl__item">ディレクトリツリー構造</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">tree /f</th>
+                        <td class="c-tbl__item">ファイルツリー構造</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">dir</th>
+                        <td class="c-tbl__item">ディレクトリ一覧</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">cls</th>
+                        <td class="c-tbl__item">画面クリア</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">rmdir +  ディレクトリ名</th>
+                        <td class="c-tbl__item">ディレクトリ削除</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">mkdir + ディレクトリ名</th>
+                        <td class="c-tbl__item">ディレクトリ作成</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">del + ファイル名</th>
+                        <td class="c-tbl__item">ファイル削除</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">ren + 名前</th>
+                        <td class="c-tbl__item">ファイル・ディレクトリ名変更</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="tab-command03" class="c-tab__body__item">
+                <div class="c-tbl-scroll">
+                  <table class="c-tbl">
+                    <colgroup>
+                      <col class="u-w30">
+                      <col class="u-w70">
+                    </colgroup>
+                    <thead class="c-tbl__head">
+                      <tr>
+                        <th class="c-tbl__item">コマンド</th>
+                        <th class="c-tbl__item">説明</th>
+                      </tr>
+                    </thead>
+                    <tbody class="c-tbl__body">
+                      <tr>
+                        <th class="c-tbl__item">pwd</th>
+                        <td class="c-tbl__item">現在のディレクトリのパスを表示</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">ls</th>
+                        <td class="c-tbl__item">カレントディレクトリ内のファイルを一覧表示</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">mkdir {ディレクトリ名}</th>
+                        <td class="c-tbl__item">指定した名前のディレクトリを作成</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">cd {ディレクトリ名}</th>
+                        <td class="c-tbl__item">カレントディレクトリを指定したディレクトリに変更</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div id="tab-command04" class="c-tab__body__item">
+                <div class="c-tbl-scroll">
+                  <table class="c-tbl">
+                    <colgroup>
+                      <col class="u-w30">
+                      <col class="u-w70">
+                    </colgroup>
+                    <thead class="c-tbl__head">
+                      <tr>
+                        <th class="c-tbl__item">コマンド、キー</th>
+                        <th class="c-tbl__item">説明</th>
+                      </tr>
+                    </thead>
+                    <tbody class="c-tbl__body">
+                      <tr>
+                        <th class="c-tbl__item">history</th>
+                        <td class="c-tbl__item">コマンドの履歴を表示</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">上下の矢印キー（↑／↓）</th>
+                        <td class="c-tbl__item">ひとつ前のコマンド、ひとつ後のコマンドの呼び出し</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">Ctrl + A</th>
+                        <td class="c-tbl__item">カーソルを行の先頭に移動</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">Ctrl + E</th>
+                        <td class="c-tbl__item">カーソルを行の末尾に移動</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">Ctrl + U</th>
+                        <td class="c-tbl__item">カーソルの左側をすべて削除</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">Ctrl + K</th>
+                        <td class="c-tbl__item">カーソルの右側をすべて削除</td>
+                      </tr>
+                      <tr>
+                        <th class="c-tbl__item">Tabキー</th>
+                        <td class="c-tbl__item">ディレクトリ名やファイル名を途中まで入力したときに「Tab」キーを押すとそのディレクトリ名やファイル名を補完する</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mod-sec__nest">
+          <h3 class="mod-h3">Googleコーディングガイドライン</h3>
+          <div>https://fueru.info/design/html-css/google-styleguide/</div>
+        </section>
+      </section>
+
+      <p class="c-scroll-top"><a href="#anc-top" class="c-scroll-top__inner">PAGE TOP</a></p>
+    </main>
+
+    <footer class="l-footer">
+      <div class="mod-footer-txt">Environment Setting 2022</div>
+    </footer>
+  </div><!-- /.l-container -->
+
+  <script src="./assets/js/lib.js"></script>
+  <script src="./assets/js/run.js"></script>
+</body>
+</html>

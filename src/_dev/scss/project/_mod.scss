@@ -1,0 +1,77 @@
+.mod-h1 {
+  font-size: $fontSizeSp16;
+  font-family: Nunito, sans-serif;
+  line-height: 1;
+  @include pc {
+    font-size: $fontSizePc24;
+  }
+}
+
+.mod-footer-txt {
+  font-size: $fontSize10;
+  font-family: Nunito, sans-serif;
+  line-height: 1;
+  color: $whiteColor;
+  @include pc {
+    font-size: $fontSizePc12;
+  }
+}
+
+.mod-sec {
+  margin-top: 30px;
+  @include tab {
+    margin-top: 60px;
+  }
+
+  > *::first-child {
+    margin-top: 0;
+  }
+}
+
+.mod-sec__nest {
+  margin-top: 30px;
+  @include tab {
+    margin-top: 40px;
+  }
+
+  > *::first-child {
+    margin-top: 0;
+  }
+}
+
+.mod-h2 {
+  margin: 0 -30px;
+  padding: 8px 30px;
+  font-size: $fontSizeSp16;
+  text-align: center;
+  color: $whiteColor;
+  background-color: $mainColor1;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  @include tab {
+    margin: 0 -60px;
+    font-size: $fontSizePc22;
+  }
+}
+
+.mod-h3 {
+  padding: 8px 10px;
+  font-size: $fontSizeSp14;
+  border-left: 7px solid $mainColor1;
+  background-color: $grayColor1;
+  @include tab {
+    font-size: $fontSizePc20;
+  }
+}
+
+pre {
+  margin-top: 10px;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: $blackColor;
+
+  code {
+    color: $whiteColor;
+  }
+}

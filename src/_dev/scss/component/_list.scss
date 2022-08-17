@@ -1,0 +1,313 @@
+/*--------------------------------
+  Disc
+--------------------------------*/
+.c-list-disc {
+  margin: calc(30 / 600 * 100vw) 0 0;
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    padding-left: 1.2em;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      margin-top: calc(6 / 600 * 100vw);
+      width: calc(10 / 600 * 100vw) 0 0;
+      height: calc(10 / 600 * 100vw) 0 0;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $baseFontColor;
+      @include tab {
+        margin-top: 8px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    & + li {
+      margin-top: 10px;
+    }
+
+    > ul, > ol {
+      margin-top: 5px;
+      @include tab {
+        & li + li {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  & > li > & > li::before {
+    content: "\30FB"; /* ・ */
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+}
+
+/*--------------------------------
+  Number
+--------------------------------*/
+.c-list-num {
+  margin: calc(30 / 600 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  counter-reset: num;
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    &::before, & > .c-list-num__txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    &::before {
+      padding-right: .5em;
+      counter-increment: num;
+      content: counters(num, "-") ".";
+      white-space: pre;
+    }
+
+    & > .c-list-num__txt {
+      padding-bottom: .5em;
+      width: 100%;
+
+      > ul, > ol {
+        margin-top: 5px;
+        @include tab {
+          & li + li {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  & > li > & > li::before {
+    content: "\30FB"; /* ・ */
+    margin-top: 0;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+}
+
+/*--------------------------------
+  mrk
+--------------------------------*/
+.c-list-mrk {
+  margin: calc(30 / 600 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    .c-list-mrk__mrk, .c-list-mrk__txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-list-mrk__mrk {
+      padding-right: 6px;
+      white-space: pre;
+    }
+    .c-list-mrk__txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+
+      > ul, > ol {
+        margin-top: 5px;
+        @include tab {
+          & li + li {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    &:last-child .c-list-mrk__txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/*--------------------------------
+  Note
+--------------------------------*/
+.c-list-note {
+  margin: calc(30 / 600 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    .c-list-note__ast, .c-list-note__txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-list-note__ast {
+      padding-right: 6px;
+      white-space: pre;
+    }
+    .c-list-note__txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+    }
+    &:last-child .c-list-note__txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/*--------------------------------
+  Link
+--------------------------------*/
+.c-list-link {
+  margin-top: 0;
+  > li {
+    padding-left: 1.2em;
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      margin-top: calc(15 / 600 * 100vw);
+      width: calc(15 / 600 * 100vw);
+      height: calc(15 / 600 * 100vw);
+      display: inline-block;
+      border-top: 2px solid #333;
+      border-right: 2px solid #333;
+      transform: rotate(45deg);
+      @include tab {
+        margin-top: 8px;
+        left: 3px;
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    & + li {
+      margin: 10px 0 0 15px;
+    }
+  }
+}
+
+/*--------------------------------
+  Dl
+--------------------------------*/
+.c-dl {
+  margin-top: 30px;
+  &__item {
+    & + & {
+      margin-top: 15px;
+    }
+
+    &__dt {
+      font-size: $fontSizeSp12;
+      font-weight: bold;
+      @include tab {
+        font-size: $fontSizePc15;
+      }
+    }
+    &__dd {
+      margin: 0;
+      padding: .2em 1em;
+      font-size: $fontSizeSp11;
+      @include tab {
+        font-size: $fontSizePc14;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+  Panel
+--------------------------------*/
+.c-list-panel {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0 10px 0 0;
+    width: calc((100% - 10px * 2) / 3);
+    border: 1px solid $mainColor3;
+    @include sp {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(n + 4) {
+        margin-top: 20px;
+      }
+    }
+    @include tab {
+      width: calc((100% - 10px * 3) / 4);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      &:nth-child(n + 5) {
+        margin-top: 20px;
+      }
+    }
+
+    &__anc {
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      text-decoration: none;
+      @include tab {
+        transition: .3s;
+        &:hover {
+          color: $whiteColor;
+          background-color: $mainColor2;
+        }
+      }
+    }
+  }
+
+  &-txt {
+    margin-top: 10px;
+    order: 2;
+
+    &__ttl {
+      margin-top: 0;
+      font-weight: bold;
+    }
+    &__txt {
+      margin-top: 5px;
+      font-size: $fontSizePc14;
+    }
+  }
+
+  &-img {
+    max-height: 100px;
+    order: 1;
+
+    img {
+      margin: 0 auto;
+      width: auto;
+      height: 100%;
+    }
+  }
+}

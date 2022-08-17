@@ -1,0 +1,24 @@
+/*--------------------------------
+  Note
+--------------------------------*/
+.c-txt--note {
+  margin: calc(20 / 600 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  @include tab {
+    margin-top: 10px;
+  }
+
+  &__ast, &__txt {
+    display: table-cell;
+    vertical-align: top;
+  }
+  &__ast {
+    padding-right: 6px;
+    white-space: pre;
+  }
+  &__txt {
+    width: 100%;
+    font-size: 100%;
+  }
+}

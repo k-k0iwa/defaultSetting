@@ -1,0 +1,54 @@
+/*--------------------------------
+  Media Query
+--------------------------------*/
+@mixin sp {
+  @media print, screen and (max-width: $break-point-sp) {
+    @content;
+  }
+}
+@mixin tab {
+  @media print, screen and (min-width: $break-point-tab) {
+    @content;
+  }
+}
+@mixin pc {
+  @media print, screen and (min-width: $break-point-pc) {
+    @content;
+  }
+}
+
+/*--------------------------------
+  Font Size
+--------------------------------*/
+// @mixin fontSizeTiny {
+//   font-size: $fontSizeSp9;
+//   line-height: 1.5;
+
+//   @include tab {
+//     font-size: $fontSizePc11;
+//   }
+// }
+// @mixin fontSizeSmall {
+//   font-size: $fontSizeSp12;
+//   line-height: 1.6;
+
+//   @include tab {
+//     font-size: $fontSizePc13;
+//   }
+// }
+// @mixin fontSizeBase {
+//   font-size: $fontSizeSp14;
+//   line-height: 1.6;
+
+//   @include tab {
+//     font-size: $fontSizePc15;
+//   }
+// }
+// @mixin fontSizeLarge {
+//   font-size: $fontSizeSp16;
+//   line-height: 1.7;
+
+//   @include tab {
+//     font-size: $fontSizePc18;
+//   }
+// }

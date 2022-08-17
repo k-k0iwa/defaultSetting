@@ -1,0 +1,62 @@
+/*--------------------------------
+  Normal
+--------------------------------*/
+.c-tbl {
+  width: 100%;
+  font-size: $fontSizeSp12;
+  border-collapse: collapse;
+  border: 2px solid $mainColor1;
+  @include tab {
+    font-size: $fontSizePc16;
+  }
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  caption {
+    text-align: left;
+    font-size: $fontSizeSp14;
+    font-weight: bold;
+    @include tab {
+      font-size: $fontSizePc18;
+    }
+  }
+
+  @include sp {
+    &-scroll {
+      overflow: auto;
+      white-space: nowrap;
+      .c-tbl {
+        width: 500px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 10px 15px;
+    border-bottom: 1px solid $mainColor1;
+  }
+
+  &__head {
+    color: $whiteColor;
+    background-color: $mainColor1;
+
+    .c-tbl__item {
+      border-right: 2px solid $mainColor1;
+      border-bottom-width: 2px;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+
+    th.c-tbl__item {
+      background-color: $grayColor1;
+    }
+
+    @include tab {
+      font-size: $fontSizePc15;
+    }
+  }
+}
