@@ -117,11 +117,12 @@ const currentClass = 'is-current';
 
             if (target.ariaExpanded === 'true') {
                 target.setAttribute('aria-expanded', 'false');
+                $panel.style.height = 0;
             } else {
                 target.setAttribute('aria-expanded', 'true');
+                $panel.style.height = 'auto';
             }
 
-            console.log($panel);
             $panel.classList.toggle(currentClass);
         });
     });

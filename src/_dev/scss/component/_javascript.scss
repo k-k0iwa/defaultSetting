@@ -80,11 +80,10 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
       height: 0;
       background-color: $bgColor2;
       overflow: hidden;
-      transition: .3s ease-out;
+      transition: .3s;
 
       &.is-current {
         padding: 30px;
-        height: auto;
       }
     }
   }
@@ -98,6 +97,7 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
     text-align: center;
     border-bottom: 2px dashed $transparentColor;
     background-color: $bgColor2;
+    transition: .3s;
     cursor: pointer;
     position: relative;
     @include tab {
