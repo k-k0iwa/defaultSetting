@@ -32,7 +32,6 @@
       </ul>
     </nav>
 
-    <div>★gulpfile.jsやpackage.jsonの内容を詳細に載せておく</div>
     <div>★Googleガイドラインの内容を掲載する？別ページで作って非同期でページ遷移させる？</div>
 
 
@@ -362,7 +361,7 @@
             <a href="https://difff.jp/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
               <div class="c-list-panel-txt">
                 <p class="c-list-panel-txt__ttl">difff《ﾃﾞｭﾌﾌ》</p>
-                <p class="c-list-panel-txt__txt">テキスト比較ツール<br>WinMergeだと差分とされる余白が無視されるのでWinMergeで差分が見にくい時に便利</p>
+                <p class="c-list-panel-txt__txt">テキスト比較ツール<br>WinMergeで差分がわかりにくい時にも使える</p>
               </div>
               <div class="c-list-panel-img"><img src="./assets/images/bookmark/difff.webp" alt=""></div>
             </a>
@@ -416,7 +415,7 @@
             <a href="https://squoosh.app/" class="c-list-panel__item__anc" target="_blank" rel="nofollow noopener">
               <div class="c-list-panel-txt">
                 <p class="c-list-panel-txt__ttl">Squoosh</p>
-                <p class="c-list-panel-txt__txt">Googleが提供するブラウザ上で画像の圧縮ができるサービス<br><em>※情報公開前の内容が含まれる画像等使用に適さない画像はオンラインでの圧縮を避けてください</em></p>
+                <p class="c-list-panel-txt__txt">Google製のブラウザ上で画像の圧縮ができるサービス<br><em>※情報公開前の内容が含まれる画像等はオンラインでの圧縮を避けてください</em></p>
               </div>
               <div class="c-list-panel-img"><img src="./assets/images/bookmark/squoosh.webp" alt=""></div>
             </a>
@@ -630,14 +629,14 @@
               </dd>
             </div>
             <div class="c-dl__item">
-              <dt class="c-dl__item__dt">3-a.必要なモジュールをインストール</dt>
+              <dt class="c-dl__item__dt">3-a.必要なモジュールをインストール（新規ファイル）</dt>
               <dd class="c-dl__item__dd">
                 <p>以下コマンドは一例です。必要に応じてモジュールを追加します。</p>
-                <pre><code>npm install -D gulp sass gulp-sass </code></pre>
+                <pre><code>npm install -D sass gulp-sass</code></pre>
               </dd>
             </div>
             <div class="c-dl__item">
-              <dt class="c-dl__item__dt">3-b.必要なパッケージをインストール</dt>
+              <dt class="c-dl__item__dt">3-b.必要なモジュールをインストール（既存ファイル）</dt>
               <dd class="c-dl__item__dd">
                 <p>現場でpackage.json等共有された場合は、package.jsonを案件フォルダ内に保持している状態でコマンドを実行すると、package.json内に記載されているものが「node_modules」配下にインストールされます。</p>
                 <pre><code>npm install -D</code></pre>
@@ -645,7 +644,196 @@
             </div>
             <div class="c-dl__item">
               <dt class="c-dl__item__dt">4.タスクの作成</dt>
-              <dd class="c-dl__item__dd">gulpfile.jsを作成し、Sassのコンパイル処理や画像圧縮/Webp変換など必要なコードを記述する。</dd>
+              <dd class="c-dl__item__dd">
+                <p>gulpfile.jsを作成し、Sassのコンパイル処理や画像圧縮/Webp変換など必要なコードを記述する。</p>
+                <dl class="c-acc">
+                  <div class="c-acc__item">
+                    <dt class="c-acc__item__hdg">
+                      <button class="c-acc-trigger js-acc-trigger" type="button">package.jsonサンプル</button>
+                    </dt>
+                    <dd id="acc-packagejson" class="c-acc__item__body">
+<pre><code>
+{
+  "name": "ProjectName",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "browsersync-ssi": "^0.2.4",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-webp": "^4.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "sass": "^1.54.4"
+  }
+}
+</code></pre>
+                    </dd>
+                  </div>
+                  <div class="c-acc__item">
+                    <dt class="c-acc__item__hdg">
+                      <button class="c-acc-trigger js-acc-trigger" type="button">gulpfile.jsサンプル</button>
+                    </dt>
+                    <dd id="acc-gulpfilejs" class="c-acc__item__body">
+<pre><code>
+'use strict';
+
+ /*
+src 参照元
+dest 出力先
+watch 監視
+series 直列処理
+parallel 並列処理
+*/
+const {src, dest, watch, series, parallel} = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const browserSync = require('browser-sync').create();
+const ssi = require('browsersync-ssi');
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+const imagemin = require('gulp-imagemin');
+const imageminJpg = require('imagemin-mozjpeg');
+const imageminPng = require('imagemin-pngquant');
+const imageminGif = require('imagemin-gifsicle');
+const svgmin = require('gulp-svgmin');
+const webp = require('gulp-webp');
+const rename = require('gulp-rename');
+const changed = require('gulp-changed');
+const paths = {
+    srcDir: '_dev',
+    dstDir: 'src'
+};
+
+// sass
+const scssTask = (done) => {
+    src('./_dev/scss/**/**.scss', { base: './_dev/scss', sourcemaps: true /* init */ })
+    .pipe(plumber({
+        errorHandler: notify.onError({
+            title: "ERROR!!!!!!!",
+            message: "<%= error.message %>"
+        })
+    }))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError)) //expanded
+    .pipe(dest('./src/common/css', { sourcemaps: './map' /* write */ }));
+    done();
+}
+
+// local server
+const browserSyncTask = (done) => {
+    browserSync.init({
+        server: {
+            baseDir: './src',
+            middleware: ssi({
+                baseDir: __dirname + '/src',
+                ext: '.html',
+                version: '1.4.0'
+            })
+        },
+        https: true,
+        port: 8000,
+        ui: { port: 8001 } // 管理コンソールのポート番号
+    });
+    done();
+}
+
+// reload
+const browsersyncReload = (done) => {
+    browserSync.reload();
+    done();
+}
+
+// imagemin
+const imageMinTask = (done) => {
+    const minSrcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif)';
+    let dstGlob = paths.dstDir;
+
+    src(minSrcGlob, { base: '_dev/images/' })
+    .pipe(changed(dstGlob))
+    .pipe(imagemin([
+        imageminPng({
+            quality: [.8, .9]
+        }),
+        imageminJpg({
+            quality: 85
+            // progressive: true
+        }),
+        imageminGif({
+            interlaced: false,
+            optimizationLevel: 3, //1 to 3
+            colors: 180
+        })
+    ]))
+    .pipe(dest(dstGlob));
+    done();
+}
+
+// svg min
+const svgMinTask = (done) => {
+    const svgSrcGlob = paths.srcDir + '/**/*.+(svg)';
+    let dstGlob = paths.dstDir;
+
+    src(svgSrcGlob, { base: '_dev/images/' })
+    .pipe(changed(dstGlob))
+    .pipe(svgmin())
+    .pipe(dest(dstGlob));
+    done();
+}
+
+// Webp生成
+const webpTask = (done) => {
+    const webpSrcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif)';
+    let dstGlob = paths.dstDir;
+
+    src(webpSrcGlob, { base: '_dev/images/' })
+    .pipe(changed(dstGlob))
+    // 拡張子を残した状態でリネーム
+    .pipe(rename(function(path) {
+        path.basename += path.extname;
+    }))
+    .pipe(webp())
+    .pipe(dest(dstGlob));
+    done();
+}
+
+// watch file
+const watchTask = () => {
+    watch([
+        './src/**/*.html',
+        './src/**/*.css',
+        './src/**/*.js'
+    ], browsersyncReload);
+    watch('./_dev/scss/**/*.scss', series(parallel(scssTask, browsersyncReload, imageMinTask, svgMinTask, webpTask)));
+}
+
+// 実行
+exports.default = series(
+    scssTask,
+    browserSyncTask,
+    imageMinTask,
+    svgMinTask,
+    webpTask,
+    watchTask
+);
+</code></pre>
+                    </dd>
+                  </div>
+                </dl>
+              </dd>
             </div>
           </dl>
         </section>
