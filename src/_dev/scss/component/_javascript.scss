@@ -7,6 +7,7 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
 
 // Tabs
 .c-tab {
+
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -18,7 +19,10 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
 
     &__item {
       margin-top: 0;
-      width: 100%;
+      flex: 1 0 auto;
+      @include tab {
+        flex: 1;
+      }
 
       &__inner {
         display: flex;
@@ -57,7 +61,7 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
@@ -76,20 +80,26 @@ code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-fami
 
     &__body {
       margin-top: 0;
-      padding: 0 30px;
+      padding: 0 15px;
       height: 0;
       background-color: $bgColor2;
       overflow: hidden;
       transition: .3s;
+      @include tab {
+        padding: 0 30px;
+      }
 
       &.is-current {
-        padding: 30px;
+        padding: 15px;
+        @include tab {
+          padding: 30px;
+        }
       }
     }
   }
 
   &-trigger {
-    padding: 10px 40px 10px 20px;
+    padding: 14px 40px 10px 20px;
     display: block;
     width: 100%;
     font-size: $fontSizeSp12;

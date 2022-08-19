@@ -7,10 +7,10 @@ $pcContentsInnerWidth: 960px;
 
 /*--------------------------------
   Media Query
-  SP:-599px / Tab:600px-1024px / PC:1025px-
+  SP:-768px / Tab:769px-1024px / PC:1025px-
 --------------------------------*/
-$break-point-sp: 599px;
-$break-point-tab: 600px;
+$break-point-sp: 768px;
+$break-point-tab: 769px;
 $break-point-pc: 1025px;
 
 /*--------------------------------
@@ -19,16 +19,16 @@ $break-point-pc: 1025px;
 $fontSize10: 10px;
 
 /*------ SP -------*/
-$fontSizeSp9: calc(18 / 600 * 100vw);
-$fontSizeSp10: calc(20 / 600 * 100vw);
-$fontSizeSp11: calc(22 / 600 * 100vw);
-$fontSizeSp12: calc(24 / 600 * 100vw);
-$fontSizeSp14: calc(28 / 600 * 100vw);
-$fontSizeSp15: calc(30 / 600 * 100vw);
-$fontSizeSp16: calc(32 / 600 * 100vw);
-$fontSizeSp17: calc(34 / 600 * 100vw);
-$fontSizeSp19: calc(38 / 600 * 100vw);
-$fontSizeSp20: calc(40 / 600 * 100vw);
+$fontSizeSp9: calc(18 / 768 * 100vw);
+$fontSizeSp10: calc(20 / 768 * 100vw);
+$fontSizeSp11: calc(22 / 768 * 100vw);
+$fontSizeSp12: calc(24 / 768 * 100vw);
+$fontSizeSp14: calc(28 / 768 * 100vw);
+$fontSizeSp15: calc(30 / 768 * 100vw);
+$fontSizeSp16: calc(32 / 768 * 100vw);
+$fontSizeSp17: calc(34 / 768 * 100vw);
+$fontSizeSp19: calc(38 / 768 * 100vw);
+$fontSizeSp20: calc(40 / 768 * 100vw);
 
 /*------ PC -------*/
 $fontSizePc11: 1.1rem;

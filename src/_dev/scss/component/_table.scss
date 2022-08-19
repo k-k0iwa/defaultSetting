@@ -28,7 +28,8 @@
       overflow: auto;
       white-space: nowrap;
       .c-tbl {
-        width: 500px;
+        min-width: 500px;
+        width: 100%;
       }
     }
   }

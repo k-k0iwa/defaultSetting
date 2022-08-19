@@ -2,7 +2,7 @@
   font-size: $fontSizeSp16;
   font-family: Nunito, sans-serif;
   line-height: 1;
-  @include pc {
+  @include tab {
     font-size: $fontSizePc24;
   }
 }
@@ -12,7 +12,7 @@
   font-family: Nunito, sans-serif;
   line-height: 1;
   color: $whiteColor;
-  @include pc {
+  @include tab {
     font-size: $fontSizePc12;
   }
 }
@@ -23,7 +23,7 @@
     margin-top: 60px;
   }
 
-  > *::first-child {
+  > *:first-child {
     margin-top: 0;
   }
 }
@@ -34,13 +34,13 @@
     margin-top: 40px;
   }
 
-  > *::first-child {
+  > *:first-child {
     margin-top: 0;
   }
 }
 
 .mod-h2 {
-  margin: 0 -30px;
+  margin: 0 -15px;
   padding: 8px 30px;
   font-size: $fontSizeSp16;
   text-align: center;
@@ -50,8 +50,11 @@
   top: 0;
   z-index: 999;
   @include tab {
-    margin: 0 -60px;
+    margin: 0 -30px;
     font-size: $fontSizePc22;
+  }
+  @include pc {
+    margin: 0 -60px;
   }
 }
 

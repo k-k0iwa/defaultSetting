@@ -3,10 +3,13 @@
   left: 0;
   bottom: 0;
   z-index: 9999;
-  width: 100%;
+  width: calc(100% - 52px);
   border-top: 2px solid $mainColor1;
   box-shadow: -1px 0 5px rgba(0, 0, 0, .3);
   background-color: $whiteColor;
+  @include tab {
+    width: 100%;
+  }
 
   &-list {
     margin: 0 auto;
@@ -21,11 +24,14 @@
     &__item {
       margin: 0;
       padding: 10px;
-      width: 100%;
       min-height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
+      flex: 1 0 auto;
+      @include tab {
+        flex: 1;
+      }
 
       & + & {
         border-left: 2px dotted $mainColor1;
@@ -34,28 +40,33 @@
       &__anc {
         display: inline-flex;
         align-items: center;
+        font-size: $fontSizeSp11;
         font-weight: bold;
         text-decoration: none;
         line-height: 1;
         position: relative;
         top: 2px;
-        &::before {
-          position: relative;
-          content: "";
-          margin: 0 10px 0 0;
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          background-color: $mainColor1;
-        }
-        &::after {
-          position: absolute;
-          content: "\25B2";
-          top: 50%;
-          left: 6px;
-          color: $whiteColor;
-          font-size: $fontSize10;
-          transform: translateY(-50%);
+        @include tab {
+          font-size: $fontSizePc16;
+
+          &::before {
+            position: relative;
+            content: "";
+            margin: 0 10px 0 0;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: $mainColor1;
+          }
+          &::after {
+            position: absolute;
+            content: "\25B2";
+            top: 50%;
+            left: 6px;
+            color: $whiteColor;
+            font-size: $fontSize10;
+            transform: translateY(-50%);
+          }
         }
       }
     }
