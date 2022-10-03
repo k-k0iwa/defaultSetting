@@ -1,0 +1,149 @@
+/* --------------------------------------------------------------------------
+
+    Header
+
+   -------------------------------------------------------------------------- */
+.l-header {
+  width: 100%;
+  height: 58px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99998;
+
+  @include pc {
+    width: 240px;
+    height: 100vh;
+    min-height: 100vh;
+    background-color: $yellowColor4;
+    position: absolute;
+    transition: .3s ease;
+
+    &.is-fixed {
+      position: fixed;
+      top: auto;
+      bottom: 0;
+    }
+
+    &._compact {
+      background-color: $whiteColor;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: $whiteColor;
+
+    @include pc {
+      display: block;
+      height: auto;
+      border-bottom: none;
+    }
+  }
+
+  .l-footerList {
+    @include pc {
+      margin-top: 0;
+      padding: 40px 20px;
+    }
+  }
+}
+
+.l-siteLogo {
+  padding: 11px 10px 10px;
+  display: block;
+
+  @include pc {
+    padding: 60px 0 0;
+  }
+
+  &:focus {
+    outline-offset: -2px;
+  }
+
+  &__inner {
+    @include pc {
+      display: block;
+    }
+  }
+
+  img {
+    // width: 100px;
+    height: 30px;
+
+    @include pc {
+      margin: 0 auto;
+      width: 59px;
+      height: 111px;
+    }
+  }
+}
+
+.l-spMenuBtn {
+  width: 58px;
+  height: 58px;
+  position: relative;
+
+  @include pc {
+    width: 0;
+    height: 0;
+  }
+
+  &__inner {
+    padding: 0;
+    width: 58px;
+    height: 58px;
+    transition: transform .3s;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 40px;
+      transition: transform .3s;
+
+      @include pc {
+        position: static;
+        width: 0;
+        height: 0;
+      }
+    }
+    &::before {
+      top: 16px;
+      height: 15px;
+      border: 3px solid $grayColor6;
+      border-left: none;
+      border-right: none;
+    }
+    &::after {
+      bottom: 16px;
+      height: 3px;
+      background-color: $grayColor6;
+    }
+    &:focus {
+      outline-offset: -2px;
+    }
+  }
+
+  &.is-active {
+    .l-spMenuBtn__inner {
+      transform: rotate(-360deg);
+
+      &::before {
+        height: 3px;
+        border: none;
+        background-color: $grayColor6;
+        transform: translateY(13px) rotate(-45deg);
+      }
+      &::after {
+        transform: translateY(-10px) rotate(45deg);
+      }
+    }
+  }
+}

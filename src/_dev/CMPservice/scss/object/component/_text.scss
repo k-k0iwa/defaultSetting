@@ -1,0 +1,202 @@
+/* --------------------------------------------------------------------------
+
+    Text
+
+   -------------------------------------------------------------------------- */
+/* .c-txtNote
+   ========================================================================== */
+.c-txtNote {
+  margin: calc(20 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  @include fontSizeSmall;
+
+  @include tab {
+    margin-top: 10px;
+  }
+
+  &--ast, &--txt {
+    display: table-cell;
+    vertical-align: top;
+  }
+  &--ast {
+    padding-right: 6px;
+    white-space: pre;
+  }
+  &--txt {
+    width: 100%;
+    font-size: 100%;
+  }
+}
+
+/* .c-txtStatus
+   ========================================================================== */
+.c-txtStatus {
+  margin: calc(30 / 720 * 100vw) 0 0;
+  padding: 0 0 0 calc(30 / 720 * 100vw);
+  display: inline-block;
+  @include fontSizeSmall;
+  font-weight: bold;
+  background-color: $yellowColor1;
+  position: relative;
+
+  @include tab {
+    margin: 20px 0 0 -20px;
+    padding-left: 20px;
+  }
+
+  .c-txtStatusDesc + & {
+    margin-top: calc(40 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+    }
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    margin: auto 0;
+  }
+
+  &::before {
+    left: calc(-50 / 720 * 100vw);
+    display: inline-block;
+    width: calc(50 / 720 * 100vw);
+    height: calc(50 / 720 * 100vw);
+    background: url(../../common/images/icon_status.svg) no-repeat 0 0 / 380% 100%;
+
+    @include tab {
+      left: -26px;
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &._reconsent {
+    color: $whiteColor;
+    background-color: $purpleColor1;
+    &::before {
+      background-position: calc(-141 / 720 * 100vw) 0;
+      @include tab {
+        background-position: -90px 0;
+      }
+    }
+  }
+  &._withdraw {
+    color: $whiteColor;
+    background-color: $grayColor3;
+    &::before {
+      background-position: calc(-69 / 720 * 100vw) 0;
+      @include tab {
+        background-position: -45px 0;
+      }
+    }
+  }
+  &._end {
+    background-color: $grayColor8;
+  }
+
+  & + .c-btn {
+    margin-top: calc(30 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* .c-txtStatusDesc
+   ========================================================================== */
+.c-txtStatusDesc {
+  margin: calc(30 / 720 * 100vw) 0 0;
+  @include fontSizeSmall;
+  line-height: 1.916;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  & + .c-btn {
+    margin-top: calc(30 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+    }
+  }
+}
+
+/* .c-txtDetails
+   ========================================================================== */
+.c-txtDetails {
+  @include fontSizeSmall;
+  line-height: 1.916;
+
+  & + & {
+    margin-top: calc(48 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 28px;
+    }
+  }
+}
+
+/* .c-labelRequired
+   ========================================================================== */
+.c-labelRequired {
+  padding: calc(2 / 720 * 100vw) calc(14 / 720 * 100vw) 0;
+  color: $whiteColor;
+  background-color: $greenColor1;
+
+  @include tab {
+    margin-right: 14px;
+    padding: 4px 10px;
+    font-size: $fontSizePC12;
+    line-height: 1;
+
+    .c-listDataItem & {
+      margin-right: 0;
+    }
+  }
+}
+
+/* .c-txtEmphasis
+   ========================================================================== */
+.c-txtEmphasis {
+  margin: calc(60 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 40px;
+  }
+}
+
+/* noscript txt
+   ========================================================================== */
+html:not([data-script-enabled="true"]) {
+  .c-txtNoscript {
+    margin-top: 12px;
+    padding: 0 10px 0 110px;
+    font-size: $fontSize10;
+    position: relative;
+    z-index: 99999;
+
+    @include pc {
+      margin: 10px 0 5px 240px;
+      padding: 0;
+      font-size: $fontSizePC13;
+      text-align: center;
+    }
+
+    &--inner {
+      font-weight: normal;
+    }
+  }
+}
+[data-script-enabled="true"] {
+  .c-txtNoscript {
+    display: none;
+  }
+}

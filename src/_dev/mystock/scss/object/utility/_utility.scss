@@ -1,0 +1,110 @@
+/* --------------------------------------------------------------------------
+
+    Utility
+
+   -------------------------------------------------------------------------- */
+/* Align
+   ========================================================================== */
+.u-align--center {
+  text-align: center;
+}
+@include tab {
+  .u-align--center-pc {
+    text-align: center;
+  }
+}
+.u-align--left {
+  text-align: left;
+}
+.u-align--right {
+  text-align: right;
+}
+.u-flexVerticalAlign--center {
+  align-items: center;
+}
+
+/* Display
+   ========================================================================== */
+.u-spHide {
+  display: none;
+
+  @include tab {
+    display: block;
+  }
+}
+.u-pcHide {
+  @include tab {
+    display: none;
+  }
+}
+// 視覚的に隠しつつスクリーンリーダーでは読み上げられる
+.u-visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Width
+   ========================================================================== */
+.u-width5 {
+  width: 5%;
+}
+.u-width10 {
+  width: 10%;
+}
+.u-width15 {
+  width: 15%;
+}
+.u-width20 {
+  width: 20%;
+}
+.u-width25 {
+  width: 25%;
+}
+.u-width30 {
+  width: 30%;
+}
+.u-width35 {
+  width: 35%;
+}
+.u-width40 {
+  width: 40%;
+}
+.u-width45 {
+  width: 45%;
+}
+.u-width50 {
+  width: 50%;
+}
+.u-width55 {
+  width: 55%;
+}
+.u-width60 {
+  width: 60%;
+}
+.u-width65 {
+  width: 65%;
+}
+.u-width70 {
+  width: 70%;
+}
+.u-width75 {
+  width: 75%;
+}
+.u-width80 {
+  width: 80%;
+}
+.u-width85 {
+  width: 85%;
+}
+.u-width90 {
+  width: 90%;
+}
+.u-width95 {
+  width: 95%;
+}
+.u-width100 {
+  width: 100%;
+}

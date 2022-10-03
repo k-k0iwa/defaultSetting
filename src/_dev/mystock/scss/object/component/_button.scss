@@ -1,0 +1,35 @@
+/* --------------------------------------------------------------------------
+
+    Button
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%commonStyle {
+  display: inline-block;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 45px;
+
+  @include tab {
+    border-width: 2px;
+    transition: .3s ease;
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid $linkHoverColor;
+  }
+}
+
+
+/* .c-btn
+   ========================================================================== */
+.c-btn {
+  margin: calc(45 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 20px;
+  }
+}

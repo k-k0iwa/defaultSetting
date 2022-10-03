@@ -1,0 +1,233 @@
+/* --------------------------------------------------------------------------
+
+    JavaScript
+
+   -------------------------------------------------------------------------- */
+/* Tab
+   ========================================================================== */
+.c-tab {
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 3px;
+    background: $whiteColor;
+    position: relative;
+
+    &__item {
+      margin-top: 0;
+      flex: 1 0 auto;
+      @include tab {
+        flex: 1;
+      }
+
+      &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        text-decoration: none;
+        border-top: 2px solid $grayColor1;
+        background-color: $backgroundColor3;
+
+        .is-current & {
+          font-weight: bold;
+          color: $whiteColor;
+          border-top-color: $grayColor2;
+          background-color: $grayColor2;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  &__body {
+
+    &__item {
+      display: none;
+
+      &.is-current {
+        display: block;
+        animation: fadeIn .7s ease 0s 1 normal;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Modal dialog
+   ========================================================================== */
+[data-script-enabled="true"] {
+  .is-hidden {
+    display: none;
+  }
+
+  .c-modalOverlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99998;
+    background-color: $alphaColor1;
+  }
+
+  .c-modal {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 99999;
+    width: calc(100% - calc(52 / 720 * 100vw));
+    height: auto;
+    overflow-y: visible;
+
+    @include tab {
+      width: 100%;
+      max-width: 438px;
+    }
+
+    .c-modal__inner {
+      padding: calc(80 / 750 * 100vw) calc(40 / 750 * 100vw);
+      max-height: 80%;
+      background-color: $whiteColor;
+      overflow-y: auto;
+      position: relative;
+      top: 0;
+
+      @include tab {
+        padding: 40px 45px 42px;
+      }
+    }
+
+    // 中身が多い時スクロールできるように
+    &.is-contentsOver {
+      height: 80%;
+
+      .c-modal__inner {
+        max-height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+html:not([data-script-enabled="true"]) {
+  .c-modalContentsArea {
+    margin: 0 auto;
+    padding: calc(80 / 720 * 100vw) calc(30 / 720 * 100vw) calc(100 / 720 * 100vw);
+    max-width: 1400px;
+
+    @include tab {
+      padding: 50px 20px;
+    }
+    @include pc {
+      margin-left: 240px;
+      padding: 100px 50px;
+    }
+
+    .c-modal {
+      margin-top: calc(50 / 720 * 100vw);
+      padding-top: calc(50 / 720 * 100vw);
+      border-top: 1px solid $grayColor1;
+
+      @include tab {
+        margin-top: 50px;
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+.c-modal {
+  line-height: 1.916;
+
+  &__inner {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+/* Accordion
+   ========================================================================== */
+.c-acc {
+  margin-top: 30px;
+  border: 2px solid $grayColor1;
+
+  &__item {
+    & + & {
+      border-top: 2px solid $grayColor1;
+    }
+
+    &__body {
+      margin-top: 0;
+      padding: 0 15px;
+      height: 0;
+      background-color: $backgroundColor1;
+      overflow: hidden;
+      transition: .3s;
+      @include tab {
+        padding: 0 30px;
+      }
+
+      &.is-current {
+        padding: 15px;
+        @include tab {
+          padding: 30px;
+        }
+      }
+    }
+  }
+
+  &-trigger {
+    padding: 14px 40px 10px 20px;
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px dashed $transparentColor;
+    background-color: $backgroundColor1;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+
+    &[aria-expanded="true"] {
+      border-bottom-color: $grayColor1;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      margin: auto 0;
+      width: 20px;
+      height: 4px;
+      background-color: $grayColor1;
+    }
+    &::after {
+      transform: rotate(90deg);
+      transition: .3s;
+    }
+    &[aria-expanded="true"]::after {
+      transform: rotate(180deg);
+    }
+  }
+}

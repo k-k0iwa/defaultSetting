@@ -1,0 +1,87 @@
+/* --------------------------------------------------------------------------
+
+    Footer
+
+   -------------------------------------------------------------------------- */
+
+/* .l-footer
+   ========================================================================== */
+.l-footer {
+  padding: 0 calc(36 / 720 * 100vw) calc(60 / 720 * 100vw);
+  background-color: $whiteColor;
+
+  @include tab {
+    padding: 0 0 20px;
+  }
+
+  @include pc {
+    margin-top: 60px;
+    margin-left: 240px;
+    padding: 0 0 10px;
+
+    html:not([data-script-enabled="true"]) & {
+      margin-top: 0;
+    }
+
+    .l-fullWidth & {
+      margin-left: 0;
+    }
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  .l-footerList {
+    margin: 0 calc(-36 / 720 * 100vw);
+    padding: calc(60 / 720 * 100vw) calc(36 / 720 * 100vw);
+    font-size: $fontSizeSP20;
+    background-color: $backgroundColor3;
+
+    @include tab {
+      margin: 0;
+      padding: 40px 50px 30px;
+      font-size: $fontSizePC12;
+    }
+
+    li + li {
+      margin-top: calc(40 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 26px;
+      }
+    }
+    a {
+      color: $baseFontColor1;
+    }
+  }
+
+  .l-txtCopy {
+    margin: calc(50 / 720 * 100vw) 0 0;
+    text-align: center;
+
+    @include tab {
+      margin-top: 20px;
+    }
+
+    @include pc {
+      margin-top: 0;
+
+      html:not([data-script-enabled="true"]) & {
+        margin-top: 20px;
+      }
+    }
+
+    small {
+      font-size: $fontSizeSP18;
+
+      @include tab {
+        font-size: $fontSizePC9;
+      }
+    }
+  }
+
+  .l-bgGrad & {
+    background-color: $transparentColor;
+  }
+}

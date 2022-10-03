@@ -1,0 +1,402 @@
+/* --------------------------------------------------------------------------
+
+    Button
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%commonStyle {
+  display: inline-block;
+  text-align: center;
+  border-width: calc(3 / 720 * 100vw);
+  border-style: solid;
+  border-radius: 45px;
+
+  @include tab {
+    border-width: 2px;
+    transition: .3s ease;
+  }
+
+  &:focus {
+    outline: none;
+    border: calc(3 / 720 * 100vw) solid $focusColor;
+
+    @include tab {
+      border-width: 2px;
+    }
+  }
+}
+
+%normalSize {
+  padding: calc(28 / 720 * 100vw) calc(20 / 720 * 100vw) calc(24 / 720 * 100vw);
+  min-width: calc(316 / 720 * 100vw);
+  @extend %commonStyle;
+  font-size: $fontSizeSP24;
+  line-height: 1.416;
+
+  @include tab {
+    padding: 15px 28px 12px;
+    min-width: 190px;
+    font-size: $fontSizePC15;
+    line-height: 1.666;
+  }
+}
+
+%smallSize {
+  padding: calc(20 / 720 * 100vw) calc(33 / 720 * 100vw) calc(18 / 720 * 100vw);
+  min-width: calc(230 / 720 * 100vw);
+  @extend %commonStyle;
+  @include fontSizeSmall;
+
+  @include tab {
+    padding: 9px 10px 8px;
+    min-width: 126px;
+  }
+}
+
+%largeSize {
+  padding: calc(28 / 720 * 100vw) calc(20 / 720 * 100vw) calc(24 / 720 * 100vw);
+  min-width: calc(440 / 720 * 100vw);
+  @extend %commonStyle;
+
+  @include tab {
+    padding: 12px 20px 10px;
+    min-width: 226px;
+  }
+}
+
+%focus {
+  &:focus {
+    outline: none !important;
+    border-color: $focusColor;
+  }
+}
+
+
+/* .c-btn
+   ========================================================================== */
+.c-btn {
+  margin: calc(45 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  &__inner {
+    @extend %normalSize;
+    @include fontSizeSmall;
+    color: $whiteColor;
+    border-color: $grayColor1;
+    background-color: $grayColor1;
+
+    @extend %focus;
+    @include pc {
+      &:hover:not(:disabled) {
+        color: $whiteColor;
+        border-color: $transparentColor !important;
+        background-color: $grayColor2;
+      }
+      &:focus {
+        color: $whiteColor;
+      }
+    }
+
+    &:disabled {
+      border-color: $grayColor12;
+      background-color: $grayColor12;
+    }
+
+    ._reconsent & {
+      @include fontSizeBase;
+      font-weight: bold;
+      color: $purpleColor1;
+      border-color: $whiteColor;
+      background-color: $whiteColor;
+
+      @include pc {
+        &:hover:not(:disabled) {
+          color: $whiteColor;
+          border-color: $purpleColor2;
+          background-color: $purpleColor2;
+        }
+      }
+      &:focus {
+        border-color: $focusColor;
+      }
+    }
+
+    html:not([data-script-enabled="true"]) &.js-addCondition {
+      pointer-events: none;
+    }
+
+    html:not([data-script-enabled="true"]) &.js-addCondition,
+    &:disabled {
+      color: $whiteColor;
+      border-color: $grayColor2;
+      background-color: $grayColor2;
+    }
+  }
+
+  &._small &__inner {
+    @extend %smallSize;
+  }
+
+  &._large &__inner {
+    @extend %largeSize;
+  }
+
+  &._bright {
+    margin: calc(30 / 720 * 100vw) 0 0;
+
+    @include tab {
+      margin-top: 20px;
+    }
+
+    .c-conditionForm & {
+      margin-top: calc(70 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 40px;
+      }
+    }
+
+    .c-btn__inner {
+      @extend %normalSize;
+      @include fontSizeBase;
+      line-height: 1.2;
+      color: $whiteColor;
+      border-color: $greenColor1;
+      background-color: $greenColor1;
+
+      @include pc {
+        &:hover:not(:disabled) {
+          border-color: $greenColor1Hover;
+          background-color: $greenColor1Hover;
+        }
+      }
+
+      @extend %focus;
+
+      &:disabled {
+        border-color: $greenColor4;
+        background-color: $greenColor4;
+      }
+    }
+  }
+
+  &._outline {
+    margin-top: calc(30 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+    }
+
+    .c-btn__inner {
+      @extend %commonStyle;
+      font-size: $fontSizeSP28;
+      font-weight: bold;
+      color: $baseFontColor1;
+      border-color: $grayColor3;
+      background-color: $transparentColor;
+
+      @include tab {
+        font-size: $fontSizePC13;
+      }
+
+      @include pc {
+        &:hover:not(:disabled) {
+          color: $whiteColor;
+          border-color: $grayColor3;
+          background-color: $grayColor3;
+        }
+      }
+
+      @extend %focus;
+
+      &:disabled {
+        color: $grayColor13;
+        border-color: $grayColor10;
+      }
+    }
+
+    ._status & {
+      margin-top: calc(50 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 24px;
+      }
+
+      .c-btn__inner {
+        padding: calc(22 / 720 * 100vw) calc(20 / 720 * 100vw) calc(18 / 720 * 100vw);
+        border-width: 1px;
+
+        // Safari
+        _::-webkit-full-page-media, _:future, :root & {
+            padding: calc(18 / 720 * 100vw) calc(20 / 720 * 100vw);
+        }
+
+        @include tab {
+          padding: 15px 28px 12px;
+        }
+
+        @include pc {
+          &:hover:not(:disabled) {
+            color: $whiteColor;
+            border-color: $yellowColor6;
+            background-color: $yellowColor6;
+          }
+        }
+
+        @extend %focus;
+
+        &:disabled {
+          color: $grayColor15;
+          border-color: $grayColor14;
+        }
+      }
+    }
+  }
+
+  &-line {
+    margin: calc(35 / 720 * 100vw) 0 0;
+
+    @include tab {
+      margin-top: 24px;
+    }
+
+    &._close {
+      margin-left: auto;
+      display: block;
+
+      @include tab {
+        margin-right: -8px;
+        font-size: $fontSizePC15;
+      }
+    }
+
+    &__inner {
+      @include fontSizeSmall;
+      color: $baseFontColor1;
+      text-decoration: underline;
+
+      @include pc {
+        transition: .3s ease;
+
+        &:hover, &:focus {
+          color: $linkHover;
+        }
+      }
+    }
+
+    .c-modal & {
+      margin-top: calc(98 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-simple {
+    margin: calc(84 / 720 * 100vw) 0 0;
+    text-align: center;
+
+    @include tab {
+      margin-top: 52px;
+    }
+
+    &__inner {
+      display: inline-block;
+      font-size: $fontSizeSP28;
+      text-decoration: underline;
+      position: relative;
+
+      @include tab {
+        padding-right: 32px;
+        font-size: $fontSizePC18;
+      }
+
+      @include pc {
+        transition: color .3s ease;
+
+        &:hover, &:focus {
+          color: $linkHover;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: calc(-34 / 720 * 100vw);
+        bottom: 0;
+        z-index: 0;
+        margin-top: calc(2 / 720 * 100vw);
+        width: calc(16 / 720 * 100vw);
+        height: calc(16 / 720 * 100vw);
+        border-top: calc(3 / 720 * 100vw) solid $grayColor9;
+        border-left: calc(3 / 720 * 100vw) solid $grayColor9;
+        transform: rotate(-135deg);
+
+        @include tab {
+          right: 0;
+          margin-top: -2px;
+          width: 11px;
+          height: 11px;
+          border-width: 2px;
+        }
+      }
+
+      @include pc {
+        transition: border-color .3s ease;
+
+        &:hover::before, &:focus::before {
+          border-color: $linkHover;
+        }
+      }
+    }
+
+    &._showAll {
+      margin-top: calc(60 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 30px;
+
+        .c-btn-simple__inner {
+          font-size: $fontSizePC15;
+        }
+      }
+    }
+    .c-linkList-company + &,
+    .c-accordion + & {
+      @include tab {
+        margin-top: 77px;
+      }
+    }
+  }
+
+  .c-box + & {
+    margin-top: calc(98 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 65px;
+    }
+  }
+
+  .c-lytPcFlexThree + & {
+    margin-top: calc(112 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 30px;
+    }
+  }
+
+  .c-modal & {
+    @include tab {
+      .c-btn__inner {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+}

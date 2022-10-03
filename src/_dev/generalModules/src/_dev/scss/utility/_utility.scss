@@ -1,0 +1,26 @@
+.u-align--center {
+  text-align: center;
+}
+@include tab {
+  .u-align--center-pc {
+    text-align: center;
+  }
+}
+.u-align--left {
+  text-align: left;
+}
+.u-align--right {
+  text-align: right;
+}
+
+.u-display--pc {
+  display: none;
+  @include tab {
+    display: block;
+  }
+}
+@include tab {
+  .u-display--sp {
+    display: none;
+  }
+}

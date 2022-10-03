@@ -1,0 +1,43 @@
+/* --------------------------------------------------------------------------
+
+    Main
+
+   -------------------------------------------------------------------------- */
+.l-main {
+  flex: 1 0 auto; //少量コンテンツ時にフッター下固定用
+  display: flex; //少量コンテンツ時にフッター下固定用
+  flex-direction: column; //少量コンテンツ時にフッター下固定用
+  background-color: $backgroundColor2;
+
+  html:not([data-script-enabled="true"]) & {
+    margin-top: calc(14 / 720 * 100vw);
+
+    @include pc {
+      margin-top: 0;
+    }
+  }
+
+  [data-script-enabled="true"] & {
+    margin-top: 58px;
+
+    @include pc {
+      margin-top: 0;
+    }
+  }
+
+  @include pc {
+    margin-left: 240px;
+
+    .l-fullWidth & {
+      margin-left: 0;
+    }
+  }
+
+  .l-bgNoColor & {
+    background-color: $transparentColor;
+  }
+
+  .l-bgGrad & {
+    background-color: $transparentColor;
+  }
+}

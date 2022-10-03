@@ -1,0 +1,88 @@
+/* --------------------------------------------------------------------------
+
+    Contents Width
+
+   -------------------------------------------------------------------------- */
+$viewMinWidth: 320px;
+$contents-width: 1000px;
+
+
+/* --------------------------------------------------------------------------
+
+    Media Query
+
+   -------------------------------------------------------------------------- */
+$break-point-sp: 414px;
+$break-point-tab: 768px;
+$break-point-pc: 1025px;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Size
+
+   -------------------------------------------------------------------------- */
+/* Liquid
+   ========================================================================== */
+// font-size: clampFs(最小値, 推奨値, 最大値, 画面幅);
+// ex. font-size: clampFs(12, 14, 16, 414);
+@use "sass:math";
+@function clampFs($minSize, $defalutSize, $maxSize, $viewPort) {
+  $minSize: $minSize * .1rem;
+  $maxSize: $maxSize * .1rem;
+  $num: calc(100 / $viewPort * 1vw);
+  $defalutSize_vw: $num * $defalutSize;
+  @return clamp($minSize, $defalutSize_vw, $maxSize);
+}
+
+/* rem
+   ========================================================================== */
+$fontSize10: 1rem;
+$fontSize11: 1.1rem;
+$fontSize12: 1.2rem;
+$fontSize13: 1.3rem;
+$fontSize14: 1.4rem;
+$fontSize15: 1.5rem;
+$fontSize16: 1.6rem;
+$fontSize17: 1.7rem;
+$fontSize18: 1.8rem;
+$fontSize19: 1.9rem;
+$fontSize20: 2rem;
+$fontSize21: 2.1rem;
+$fontSize22: 2.2rem;
+$fontSize23: 2.3rem;
+$fontSize24: 2.4rem;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Color
+
+   -------------------------------------------------------------------------- */
+/* General
+   ========================================================================== */
+$whiteColor: #fff;
+$blackColor: #000;
+$transparentColor: transparent;
+
+$baseFontColor: #333;
+$linkColor: #333;
+$linkHoverColor: #167ffc;
+$linkActiveColor: #595bd4;
+
+
+/* Other
+   ========================================================================== */
+$grayColor1: #757575;
+$grayColor2: #b2b2b2;
+$grayColor3: #adadad;
+
+$backgroundColor1: #fafafa;
+$backgroundColor2: #eee;
+$backgroundColor3: #f5f7f8;
+
+$alphaColor1: rgba(0, 0, 0, .3);
+// $alphaColor2: rgba(255, 255, 255, .7);
+// $alphaColor3: rgba(255, 255, 255, .1);
+
+// $gradationColor1: linear-gradient(#e2ede7, #cde6f3);

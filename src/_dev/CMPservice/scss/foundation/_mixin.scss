@@ -1,0 +1,71 @@
+/* --------------------------------------------------------------------------
+
+    Setting
+
+   -------------------------------------------------------------------------- */
+
+/* Media Query
+    ========================================================================== */
+// 720px未満と横向きで667px以下のデバイス（iPhone 8/7/6s/6）に適用
+@mixin tab {
+  @media print, screen and (min-width: $break-point-tab), screen and (orientation: landscape) and (min-width: 667px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media print, screen and (min-width: $break-point-pc) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (orientation: landscape) and (min-width: 667px) and (max-width: 896px) {
+    @content;
+  }
+}
+
+@mixin miniLandscape {
+  @media only screen and (max-width: 666px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* Font
+   ========================================================================== */
+@mixin fontSizeTiny {
+  font-size: $fontSizeSP18;
+  line-height: 1.555;
+
+  @include tab {
+    font-size: $fontSizePC11;
+    line-height: 1.909;
+  }
+}
+@mixin fontSizeSmall {
+  font-size: $fontSizeSP24;
+  line-height: 1.416;
+
+  @include tab {
+    font-size: $fontSizePC13;
+    line-height: 1.769;
+  }
+}
+@mixin fontSizeBase {
+  font-size: $fontSizeSP28;
+  line-height: 1.642;
+
+  @include tab {
+    font-size: $fontSizePC15;
+    line-height: 1.666;
+  }
+}
+@mixin fontSizeLarge {
+  font-size: $fontSizeSP30;
+  line-height: 1.666;
+
+  @include tab {
+    font-size: $fontSizePC18;
+    line-height: 1.555;
+  }
+}

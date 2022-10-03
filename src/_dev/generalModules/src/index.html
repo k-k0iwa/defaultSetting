@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>パーツ集</title>
+<link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+<div class="l-container">
+<header class="l-header">
+<h1 class="mod-h1">Parts collection</h1>
+</header>
+
+<main class="l-main">
+<section class="mod-sec">
+<h2 class="mod-h2">リスト</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">ドット</h3>
+<div class="mod-preview">
+<ul class="c-list-disc">
+  <li>ドットリスト</li>
+  <li>ドットリスト</li>
+</ul>
+
+<ul class="c-list-disc">
+  <li>
+    <div>リストの入れ子</div>
+    <ul class="c-list-disc">
+      <li>ドットリスト</li>
+      <li>ドットリスト</li>
+    </ul>
+  </li>
+</ul>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;ul class=&quot;c-list-disc&quot;&gt;
+  &lt;li&gt;ドットリスト&lt;/li&gt;
+  &lt;li&gt;ドットリスト&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;c-list-disc&quot;&gt;
+  &lt;li&gt;
+    &lt;div&gt;リストの入れ子&lt;/div&gt;
+    &lt;ul class=&quot;c-list-disc&quot;&gt;
+      &lt;li&gt;ドットリスト&lt;/li&gt;
+      &lt;li&gt;ドットリスト&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">数字</h3>
+<div class="mod-preview">
+<ul class="c-list-num">
+  <li>
+    <div class="c-list-num__txt">数字リスト</div>
+  </li>
+  <li>
+    <div class="c-list-num__txt">数字リスト</div>
+  </li>
+</ul>
+
+<ul class="c-list-num">
+  <li>
+    <div class="c-list-num__txt">リストの入れ子
+      <ul class="c-list-disc">
+        <li>ドットリスト</li>
+        <li>ドットリスト</li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;ul class=&quot;c-list-num&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-num__txt&quot;&gt;数字リスト&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-num__txt&quot;&gt;数字リスト&lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;c-list-num&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-num__txt&quot;&gt;リストの入れ子
+      &lt;ul class=&quot;c-list-disc&quot;&gt;
+        &lt;li&gt;ドットリスト&lt;/li&gt;
+        &lt;li&gt;ドットリスト&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">マーク</h3>
+<div class="mod-preview">
+<ul class="c-list-mrk">
+  <li>
+    <div class="c-list-mrk__mrk">a-1.</div>
+    <div class="c-list-mrk__txt">ドットと数字以外のリスト</div>
+  </li>
+  <li>
+    <div class="c-list-mrk__mrk">a-2.</div>
+    <div class="c-list-mrk__txt">ドットと数字以外のリスト</div>
+  </li>
+</ul>
+
+<ul class="c-list-mrk">
+  <li>
+    <div class="c-list-mrk__mrk">A.</div>
+    <div class="c-list-mrk__txt">リストの入れ子
+      <ul class="c-list-disc">
+        <li>ドットリスト</li>
+        <li>ドットリスト</li>
+      </ul>
+    </div>
+  </li>
+</ul>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;ul class=&quot;c-list-mrk&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-mrk__mrk&quot;&gt;a-1.&lt;/div&gt;
+    &lt;div class=&quot;c-list-mrk__txt&quot;&gt;ドットと数字以外のリスト&lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-mrk__mrk&quot;&gt;a-2.&lt;/div&gt;
+    &lt;div class=&quot;c-list-mrk__txt&quot;&gt;ドットと数字以外のリスト&lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;c-list-mrk&quot;&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;c-list-mrk__mrk&quot;&gt;A.&lt;/div&gt;
+    &lt;div class=&quot;c-list-mrk__txt&quot;&gt;リストの入れ子
+      &lt;ul class=&quot;c-list-disc&quot;&gt;
+        &lt;li&gt;ドットリスト&lt;/li&gt;
+        &lt;li&gt;ドットリスト&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+</div><!-- /.l-contents__inner -->
+</section>
+
+<section class="mod-sec">
+<h2 class="mod-h2">注釈</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">単体</h3>
+<div class="mod-preview">
+<p class="c-txt-note">
+  <span class="c-txt-note__ast">※</span>
+  <span class="c-txt-note__txt">注釈リスト</span>
+</p>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;p class=&quot;c-txt-note&quot;&gt;
+  &lt;span class=&quot;c-txt-note__ast&quot;&gt;※&lt;/span&gt;
+  &lt;span class=&quot;c-txt-note__txt&quot;&gt;注釈リスト&lt;/span&gt;
+&lt;/p&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">複数</h3>
+<div class="mod-preview">
+<ul class="c-list-note">
+  <li>
+    <span class="c-list-note__ast">※</span>
+    <span class="c-list-note__txt">注釈リスト</span>
+  </li>
+  <li>
+    <span class="c-list-note__ast">※</span>
+    <span class="c-list-note__txt">注釈リスト</span>
+  </li>
+</ul>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;ul class=&quot;c-list-note&quot;&gt;
+  &lt;li&gt;
+    &lt;span class=&quot;c-list-note__ast&quot;&gt;※&lt;/span&gt;
+    &lt;span class=&quot;c-list-note__txt&quot;&gt;注釈リスト&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span class=&quot;c-list-note__ast&quot;&gt;※&lt;/span&gt;
+    &lt;span class=&quot;c-list-note__txt&quot;&gt;注釈リスト&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+</div><!-- /.l-contents__inner -->
+</section>
+
+<section class="mod-sec">
+<h2 class="mod-h2">ボタン</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">フラット</h3>
+<div class="mod-preview">
+<div class="c-btn-flat">
+  <a href="#" class="c-btn-flat__inner">フラットボタン</a>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-btn-flat&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;c-btn-flat__inner&quot;&gt;フラットボタン&lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">立体</h3>
+<div class="mod-preview">
+<div class="c-btn-solid">
+  <a href="#" class="c-btn-solid__inner">立体ボタン</a>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-btn-solid&quot;&gt;
+  &lt;a href=&quot;#&quot; class=&quot;c-btn-solid__inner&quot;&gt;立体ボタン&lt;/a&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+</div><!-- /.l-contents__inner -->
+</section>
+
+<section class="mod-sec">
+<h2 class="mod-h2">画像</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">1枚</h3>
+<div class="mod-preview">
+<picture class="c-img-single">
+  <source media="(min-width:769px)" type="image/webp" srcset="./assets/images/img_pc2x.webp 2x, ./assets/images/i
+    mg_pc1x.webp 1x">
+  <source media="(max-width:768px)" type="image/webp" srcset="./assets/images/img_sp2x.webp 2x, ./assets/images/img_sp1x.webp 1x">
+  <source media="(max-width:768px)" srcset="./assets/images/img_sp2x.jpg 2x, ./assets/images/img_sp1x.jpg 1x">
+  <img srcset="./assets/images/img_pc2x.jpg 2x" src="./assets/images/img_pc1x.jpg" width="300" height="200" loading="lazy" alt="">
+</picture>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;picture class=&quot;c-img-single&quot;&gt;
+  &lt;source media=&quot;(min-width:769px)&quot; type=&quot;image/webp&quot; srcset=&quot;img_pc2x.webp 2x, img_pc1x.webp 1x&quot;&gt;
+  &lt;source media=&quot;(max-width:768px)&quot; type=&quot;image/webp&quot; srcset=&quot;img_sp2x.webp 2x, img_sp1x.webp 1x&quot;&gt;
+  &lt;source media=&quot;(max-width:768px)&quot; srcset=&quot;img_sp2x.jpg 2x, img_sp1x.jpg 1x&quot;&gt;
+  &lt;img srcset=&quot;img_pc2x.jpg 2x&quot; src=&quot;img_pc1x.jpg&quot; width=&quot;300&quot; height=&quot;200&quot; loading=&quot;lazy&quot; alt=&quot;&quot;&gt;
+&lt;/picture&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">画像＋テキスト</h3>
+<div class="mod-preview">
+<div class="c-img-lyt _right">
+  <div class="c-img-lyt__txt">
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+  <div class="c-img-lyt__img">
+    <img src="./assets/images/img_pc2x.jpg" width="300" height="200" loading="lazy" alt="">
+  </div>
+</div>
+
+<div class="c-img-lyt _left">
+  <div class="c-img-lyt__txt">
+    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+  </div>
+  <div class="c-img-lyt__img">
+    <img src="./assets/images/img_pc2x.jpg" width="600" height="400" loading="lazy" alt="">
+  </div>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-img-lyt _right&quot;&gt;
+  &lt;div class=&quot;c-img-lyt__txt&quot;&gt;
+    &lt;p&gt;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-img-lyt__img&quot;&gt;
+    &lt;img src=&quot;./assets/images/img_pc2x.jpg&quot; width=&quot;600&quot; height=&quot;400&quot; loading=&quot;lazy&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-img-lyt _left&quot;&gt;
+  &lt;div class=&quot;c-img-lyt__txt&quot;&gt;
+    &lt;p&gt;テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-img-lyt__img&quot;&gt;
+    &lt;img src=&quot;./assets/images/img_pc2x.jpg&quot; width=&quot;600&quot; height=&quot;400&quot; loading=&quot;lazy&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+</div><!-- /.l-contents__inner -->
+</section>
+
+<section class="mod-sec">
+<h2 class="mod-h2">表</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">スマホスクロール</h3>
+<div class="mod-preview">
+<div class="c-tbl-scroll">
+  <table class="c-tbl">
+    <thead class="c-tbl__head">
+      <tr>
+        <th class="c-tbl__item">名前</th>
+        <th class="c-tbl__item">言語</th>
+        <th class="c-tbl__item">種類</th>
+      </tr>
+    </thead>
+    <tbody class="c-tbl__body">
+      <tr>
+        <td class="c-tbl__item">jQuery</td>
+        <td class="c-tbl__item">JavaScript</td>
+        <td class="c-tbl__item">ライブラリ</td>
+      </tr>
+      <tr>
+        <td class="c-tbl__item">Vue.js</td>
+        <td class="c-tbl__item">JavaScript</td>
+        <td class="c-tbl__item">フレームワーク</td>
+      </tr>
+      <tr>
+        <td class="c-tbl__item">React</td>
+        <td class="c-tbl__item">JavaScript</td>
+        <td class="c-tbl__item">フレームワーク</td>
+      </tr>
+      <tr>
+        <td class="c-tbl__item">Angular</td>
+        <td class="c-tbl__item">JavaScript</td>
+        <td class="c-tbl__item">フレームワーク</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-tbl-scroll&quot;&gt;
+  &lt;table class=&quot;c-tbl&quot;&gt;
+    &lt;thead class=&quot;c-tbl__head&quot;&gt;
+      &lt;tr&gt;
+        &lt;th class=&quot;c-tbl__item&quot;&gt;名前&lt;/th&gt;
+        &lt;th class=&quot;c-tbl__item&quot;&gt;言語&lt;/th&gt;
+        &lt;th class=&quot;c-tbl__item&quot;&gt;種類&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;c-tbl__body&quot;&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;jQuery&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;JavaScript&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;ライブラリ&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;Vue.js&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;JavaScript&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;フレームワーク&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;React&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;JavaScript&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;フレームワーク&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;Angular&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;JavaScript&lt;/td&gt;
+        &lt;td class=&quot;c-tbl__item&quot;&gt;フレームワーク&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+</div><!-- /.l-contents__inner -->
+</section>
+
+<section class="mod-sec">
+<h2 class="mod-h2">カラム</h2>
+<div class="l-contents__inner">
+<section class="mod-sec__nest">
+<h3 class="mod-h3">2カラム</h3>
+<div class="mod-preview">
+<div class="c-col _col2">
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-col _col2&quot;&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">3カラム</h3>
+<div class="mod-preview">
+<div class="c-col _col3">
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-col _col3&quot;&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+
+<section class="mod-sec__nest">
+<h3 class="mod-h3">4カラム</h3>
+<div class="mod-preview">
+<div class="c-col _col4">
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+  <div class="c-col__item">
+    <p>2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム</p>
+  </div>
+</div>
+</div><!-- /.mod-preview -->
+<div class="mod-code" data-lang="html"><pre><code class="language-html">
+&lt;div class=&quot;c-col _col4&quot;&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-col__item&quot;&gt;
+    &lt;p&gt;2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム2カラム&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div><!-- /.mod-code -->
+</section>
+</div><!-- /.l-contents__inner -->
+</section>
+</main>
+
+<footer class="l-footer">
+<div class="mod-footer-txt">Parts collection 2022</div>
+</footer>
+</div><!-- /.l-container -->
+
+<!-- <div data-lang="html">
+<pre>
+<code class="language-html">
+&lt;p&gt;エスケープします&lt;/p&gt;
+</code>
+</pre>
+</div> -->
+<script src="./assets/js/lib.js"></script>
+</body>
+</html>

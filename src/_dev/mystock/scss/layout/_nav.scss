@@ -1,0 +1,63 @@
+/* --------------------------------------------------------------------------
+
+    Navigation
+
+   -------------------------------------------------------------------------- */
+/* .l-spmenu
+   ----------------------------------------------------------------- */
+// .l-spmenu {
+//   transition: .3s ease;
+
+//   &[aria-hidden="false"] {
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     top: 58px;
+//     left: 0;
+//     z-index: 99998;
+//     background-color: rgba(0, 0, 0, .8);
+//   }
+// }
+
+/* .l-globalNav
+   ----------------------------------------------------------------- */
+.li-nav {
+  @include tab {
+  }
+
+  @include pc {
+  }
+}
+
+
+/* .l-breadcrumb
+   ----------------------------------------------------------------- */
+// .l-breadcrumb {
+//   margin: 0;
+//   line-height: 1;
+
+//   li {
+//     display: inline;
+//     @include fontSizeTiny;
+//       a {
+//         color: $baseFontColor4;
+
+//         @include pc {
+//           &[href]:hover, &[href]:focus {
+//             color: $linkHover;
+//           }
+//         }
+//       }
+//   }
+
+//   li + li::before {
+//     padding: 0 calc(16 / 600 * 100vw) 0 calc(13 / 600 * 100vw);
+//     display: inline-block;
+//     content: ">";
+//     color: $baseFontColor4;
+
+//     @include tab {
+//       padding: 0 12px 0 8px;
+//     }
+//   }
+// }

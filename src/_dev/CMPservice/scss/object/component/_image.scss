@@ -1,0 +1,72 @@
+/* --------------------------------------------------------------------------
+
+  Image
+
+   -------------------------------------------------------------------------- */
+/* Single
+   ========================================================================== */
+.c-imgSingle {
+  margin: calc(30 / 720 * 100vw) auto 0;
+  display: block;
+  width: 100%;
+  @include tab {
+    margin-top: 30px;
+  }
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+/* Horizontal
+   ========================================================================== */
+.c-imgHorizontal__imgLeft,
+.c-imgHorizontal__imgRight {
+  margin: calc(30 / 720 * 100vw) auto 0;
+  display: flex;
+  flex-direction: column;
+
+  @include tab {
+    margin-top: 30px;
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .c-imgHorizontal--txtArea {
+    margin-top: calc(14 / 720 * 100vw);
+    order: 2;
+
+    @include tab {
+      margin-top: 0;
+      flex: 1;
+    }
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+  .c-imgHorizontal--imgArea {
+    order: 1;
+
+    @include tab {
+      max-width: 50%;
+    }
+  }
+}
+.c-imgHorizontal__imgLeft {
+  @include tab {
+    .c-imgHorizontal--txtArea {
+      margin-left: 20px;
+    }
+  }
+}
+.c-imgHorizontal__imgRight {
+  @include tab {
+    .c-imgHorizontal--txtArea {
+      margin-right: 20px;
+      order: 1;
+    }
+    .c-imgHorizontal--imgArea {
+      order: 2;
+    }
+  }
+}

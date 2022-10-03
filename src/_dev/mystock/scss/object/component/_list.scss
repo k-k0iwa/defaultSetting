@@ -1,0 +1,172 @@
+/* --------------------------------------------------------------------------
+
+    List
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%dlCommonStyle {
+  dt {
+    font-weight: bold;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  dd {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+/* List Disc
+   ========================================================================== */
+.c-listDisc {
+  margin: calc(30 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    padding-left: 1.2em;
+    position: relative;
+
+    & + li {
+      margin-top: 10px;
+    }
+
+    > .c-listDisc > li::before {
+      background-color: $grayColor1;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: calc(10 / 720 * 100vw);
+      height: calc(10 / 720 * 100vw);
+      display: inline-block;
+      margin-top: calc(6 / 720 * 100vw);
+      background-color: $baseFontColor;
+      border-radius: 50%;
+
+      @include tab {
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+/* List Number
+   ========================================================================== */
+.c-listNumber {
+  margin: calc(30 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  counter-reset: num;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    &::before, & > .c-listNumber--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    &::before {
+      padding-right: .5em;
+      counter-increment: num;
+      // content: counter(num)".";
+      content: counters(num, ".") ".";
+      white-space: pre;
+    }
+    & > .c-listNumber--txt {
+      padding-bottom: .5em;
+      width: 100%;
+
+    }
+    &:last-child > .c-listNumber--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* List Mark
+   ========================================================================== */
+.c-listMrk {
+  margin: calc(20 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    .c-listMrk--mrk, .c-listMrk--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-listMrk--mrk {
+      padding-right: 6px;
+      // text-align: right;
+      white-space: pre;
+    }
+    .c-listMrk--txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+    }
+
+    &:last-child .c-listMrk--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* List Note
+   ========================================================================== */
+.c-listNote {
+  margin: calc(20 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+
+    .c-listNote--ast, .c-listNote--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-listNote--ast {
+      padding-right: 6px;
+      white-space: pre;
+    }
+    .c-listNote--txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+    }
+
+    &:last-child .c-listNote--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* Name
+   ========================================================================== */

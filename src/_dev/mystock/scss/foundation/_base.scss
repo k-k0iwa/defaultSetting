@@ -1,0 +1,260 @@
+/* --------------------------------------------------------------------------
+
+    Base
+
+   -------------------------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include pc {
+    min-height: 100vh;
+  }
+}
+
+body {
+  color: $baseFontColor;
+  font-size: clampFs(12, 14, 16, 414);
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  word-break: break-all;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: $whiteColor;
+
+  @include tab {
+    font-size: $fontSize16;
+  }
+}
+
+header, footer, nav, section, article, aside, figure picture {
+  display: block;
+}
+
+p {
+  margin-top: calc(20 / 600 * 100vw);
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  & + & {
+    margin-top: calc(10 / 600 * 100vw);
+
+    @include tab {
+      margin-top: 10px;
+    }
+  }
+}
+
+ul, ol {
+  padding: 0;
+  list-style: none;
+}
+
+li:first-of-type, dd > *:first-child, th > *:first-child, td > *:first-child {
+  margin-top: 0;
+}
+
+strong {
+  color: $baseFontColor;
+}
+
+em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+b {
+  font-weight: bold;
+}
+
+sup {
+  position: relative;
+  top: -.6em;
+  font-size: 70%;
+}
+
+sub {
+  position: relative;
+  bottom: 0;
+  font-size: 70%;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:active {
+    color: $linkActiveColor;
+  }
+
+  @include pc {
+    transition: color .3s ease;
+
+    &:hover, &:focus {
+      color: $linkHoverColor;
+    }
+  }
+}
+
+a[href]:focus, area[href]:focus, input:not([disabled]):focus, select:not([disabled]):focus, textarea:not([disabled]):focus, button:not([disabled]):focus, iframe:focus, [tabindex]:not([tabindex^="-"]):focus {
+  outline: 1px solid $linkHoverColor;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a img {
+  border-width: 0;
+}
+
+input, select, textarea, button, [type="submit"], [type="reset"], [type="button"] {
+  color: $baseFontColor;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+[type="search"] {
+  -webkit-appearance: none;
+}
+[type="date"] {
+  display: inline-block;
+  vertical-align: middle;
+
+  &::-webkit-clear-button {
+    -webkit-appearance: none;
+  }
+}
+//スピンボタン非表示
+[type="date"], [type="number"] {
+  -moz-appearance:textfield;
+
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+    margin: 0;
+    display: none;
+    -webkit-appearance: none;
+  }
+}
+
+// chrome autofill
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px $backgroundColor1 inset;
+}
+
+// Hide clear button in Chrome and Safari.
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+[type="radio"], [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+textarea {
+  resize: vertical; // 縦のみリサイズ許可
+  // overflow: auto;
+}
+
+button, [type="submit"], [type="reset"], [type="button"], [role="button"] {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+}
+
+[type="submit"], [type="reset"], [type="button"] {
+  &::-webkit-search-decoration {
+    display: none;
+  }
+  &:focus {
+    outline-offset: -2px;
+  }
+}
+
+// search clear btn
+[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+::-moz-focus-inner {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:disabled {
+  cursor: not-allowed;
+}
+
+::placeholder {
+  color: $grayColor1;
+}
+::-moz-placeholder {
+  opacity: 1;
+}
+
+label {
+  cursor: default;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {
+  border: none;
+}
+
+dfn {
+  font-style: normal;
+}
+
+/*
+	スクロールバー
+================================*/
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
+// }
+// ::-webkit-scrollbar-track {
+//   border-radius: 5px;
+//   background-color: #e0e0e0;
+// }
+// ::-webkit-scrollbar-thumb {
+//   border-radius: 5px;
+//   background-color: #777;
+// }
+
+/* Animation
+   ========================================================================== */
+@keyframes SlideUp {
+  0% {
+    top: 100vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes SlideDown {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
+}

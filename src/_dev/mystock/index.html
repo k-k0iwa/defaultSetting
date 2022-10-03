@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Parts stock site</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- <link rel="icon" href="#"> -->
+<!-- <link rel="apple-touch-icon" href="#"> -->
+<script src="/common/js/init.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Prociono&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" media="screen,print" href="/common/css/common.css">
+</head>
+
+<body>
+  <div class="l-wrapper">
+    <!--#include file="common/inc/header.html" -->
+
+    <main class="l-main">
+      <h1 class="c-hdgLv1">General-purpose parts</h1>
+      <section class="c-sec">
+        <h2 class="c-hdgLv2">アコーディオン</h2>
+        <dl class="c-acc">
+          <div class="c-acc__item">
+            <dt class="c-acc__item__hdg">
+              <button class="c-acc-trigger js-acc-trigger" type="button">見出し01</button>
+            </dt>
+            <dd id="acc-sample01" class="c-acc__item__body">
+              <p>コンテンツ01</p>
+            </dd>
+          </div>
+          <div class="c-acc__item">
+            <dt class="c-acc__item__hdg">
+              <button class="c-acc-trigger js-acc-trigger" type="button">見出し02</button>
+            </dt>
+            <dd id="acc-sample02" class="c-acc__item__body">
+              <p>コンテンツ02</p>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <section class="c-sec">
+        <h2 class="c-hdgLv2">タブ</h2>
+        <div class="c-tab js-tab">
+          <ul class="c-tab__nav js-tab__nav">
+            <li class="c-tab__nav__item is-current">
+              <a href="#tab-sample01" class="c-tab__nav__item__inner">Section1-1</a>
+            </li>
+            <li class="c-tab__nav__item">
+              <a href="#tab-sample02" class="c-tab__nav__item__inner">Section1-2</a>
+            </li>
+          </ul>
+          <div class="c-tab__body">
+            <div id="tab-sample01" class="c-tab__body__item is-current">
+              <p>Section1-1</p>
+            </div>
+            <div id="tab-sample02" class="c-tab__body__item">
+              <p>Section1-2</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-sec">
+        <h2 class="c-hdgLv2">モーダル</h2>
+        <ul>
+          <li>
+            <a href="#js-modalItem01" data-modal="js-modalItem01">少量テキスト</a>
+          </li>
+          <li>
+            <a href="#js-modalItem02" data-modal="js-modalItem02">フォーカス動作確認</a>
+          </li>
+          <li>
+            <a href="#js-modalItem03" data-modal="js-modalItem03">内容多め</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="c-sec">
+        <h2 class="c-hdgLv2">タブ</h2>
+      </section>
+
+      <div><a href="#anc-top">トップへ戻る</a></div>
+    </main>
+
+    <!-- ▼▼▼ Modal Contents Area ▼▼▼ -->
+    <div id="js-modalContentsArea" class="c-modalContentsArea">
+      <div id="js-modalItem01" class="c-modal is-hidden">
+        <div class="c-modal__inner">
+          <p>中身が少ない</p>
+          <ul class="c-lytBtnSide">
+            <li>
+              <p class="c-btn _outline u-alignCenter">
+                <button type="button" class="js-btn-modalClose c-btn__inner">キャンセル</button>
+              </p>
+            </li>
+            <li>
+              <p class="c-btn _outline u-alignCenter">
+                <button type="button" class="c-btn__inner">OK</button>
+              </p>
+            </li>
+          </ul>
+        <!-- /.c-modal__inner --></div>
+      <!-- /#js-modal01 --></div>
+
+      <div id="js-modalItem02" class="c-modal is-hidden" aria-labelledby="aria-modal02--label" aria-describedby="aria-modal02--desc">
+        <div class="c-modal__inner">
+          <h2 id="aria-modal02--label">見出し</h2>
+          <p id="aria-modal02--desc">このモーダルダイアログの説明テキスト<br>フォーカス動作確認</p>
+          <form action="#" method="get">
+            <p><label for="modalForm1">1行入力フィールド</label>
+            <input id="modalForm1" name="modalForm1" type="text"></p>
+          </form>
+        <!-- /.c-modal__inner --></div>
+      <!-- /#js-modal02 --></div>
+
+      <div id="js-modalItem03" class="c-modal is-hidden">
+        <div class="c-modal__inner">
+          <p>中身が多い<br>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        <!-- /.c-modal__inner --></div>
+      <!-- /#js-modal03 --></div>
+    <!-- /.c-modalContentsArea --></div>
+    <!-- ▲▲▲ Modal Contents Area ▲▲▲ -->
+
+    <!--#include file="common/inc/footer.html" -->
+  </div><!-- /.l-wrapper -->
+
+  <script src="/common/js/run.js"></script>
+</body>
+</html>

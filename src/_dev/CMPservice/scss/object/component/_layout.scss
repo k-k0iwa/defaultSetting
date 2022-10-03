@@ -1,0 +1,391 @@
+/* --------------------------------------------------------------------------
+
+    Layout
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%flexStyle {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%flexStyleTab {
+  @include tab {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+%flexColumnFour {
+  @include tab {
+    margin-right: 33px;
+    width:  calc((100% - 33px *3) / 4);
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}
+
+%flexTwoFixedSide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > *:last-child {
+    flex: 0 0 auto;
+    margin-top: 0;
+    margin-left: calc(30 / 720 * 100vw);
+
+    @include tab {
+      margin-left: 20px;
+    }
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+/* .c-columnTwo
+   ========================================================================== */
+.c-columnTwo {
+  @extend %flexStyleTab;
+
+  > .c-column__item,
+  > li {
+    @include tab {
+      margin-top: 0;
+      margin-right: 33px;
+      width: calc((100% - 33px) / 2);
+
+      &.c-dl {
+        margin-right: 45px;
+        width: calc((100% - 45px) / 2);
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 33px;
+      }
+    }
+    > *:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+/* .c-columnThree
+   ========================================================================== */
+.c-columnThree {
+  @extend %flexStyleTab;
+
+  > .c-column__item,
+  > li {
+    @include tab {
+      margin-right: 33px;
+      width:  calc((100% - 33px *2) / 3);
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(n + 4) {
+        margin-top: 33px;
+      }
+    }
+    > *:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+/* .c-columnFour (1 column and 2 columns for sp)
+   ========================================================================== */
+.c-columnFour {
+  @extend %flexStyle;
+
+  > .c-column__item,
+  > li {
+    margin-right: 1em;
+    width: calc((100% - 1em) / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+
+      @include tab {
+        margin-right: 33px;
+      }
+    }
+    &:nth-child(n + 3) {
+      margin-top: 33px;
+    }
+
+    @include tab {
+      margin-right: 33px;
+      width:  calc((100% - 33px *3) / 4);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+      &:nth-child(n - 4) {
+        margin-top: 0;
+      }
+      &:nth-child(n + 5) {
+        margin-top: 33px;
+      }
+    }
+    > *:first-child{
+      margin-top: 0;
+    }
+  }
+
+  &ToOne {
+    @extend %flexStyleTab;
+
+    > .c-column__item,
+    > li {
+      @include tab {
+        margin-right: 33px;
+        width:  calc((100% - 33px *3) / 4);
+
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 33px;
+        }
+      }
+      > *:first-child{
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+/* .c-lytComTitle
+   ========================================================================== */
+.c-lytComTitle {
+  margin: calc(42 / 720 * 100vw) 0 0;
+  padding: calc(60 / 720 * 100vw) calc(44 / 720 * 100vw) calc(54 / 720 * 100vw);
+  display: flex;
+  align-items: center;
+  background-color: $whiteColor;
+
+  @include tab {
+    margin-top: 44px;
+    padding: 24px 40px 20px;
+  }
+
+  .c-box & {
+    padding: 0;
+  }
+
+  &--name {
+    margin-top: 0;
+    flex: 1;
+    order: 2;
+  }
+
+  &--name, &--desc {
+    font-size: $fontSizeSP24;
+    line-height: 1.916;
+
+    @include tab {
+      font-size: $fontSizePC15;
+      line-height: 1.923;
+    }
+  }
+
+  &--image {
+    margin-right: calc(16 / 720 * 100vw);
+    width: calc(236 / 720 * 100vw);
+    border: calc(3 / 720 * 100vw) solid $grayColor4;
+    order: 1;
+
+    @include tab {
+      margin-right: 30px;
+      width: 136px;
+      border-width: 1px;
+    }
+  }
+
+  &._desc {
+    flex-wrap: wrap;
+
+    @include tab {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      min-height: 76px;
+      position: relative;
+    }
+    /* IE */
+    @media all and (-ms-high-contrast: none) {
+      [class^="c-lytComTitle--"]:nth-child(1):nth-last-child(2) {
+        flex: auto;
+      }
+    }
+
+    .c-lytComTitle--desc {
+      margin-top: calc(40 / 720 * 100vw);
+      width: 100%;
+      order: 3;
+
+      @include tab {
+        margin-top: 10px;
+        order: 2;
+      }
+    }
+
+    @include tab {
+      margin: 6px 35px 8px;
+
+      .c-lytComTitle--name {
+        order: 1;
+      }
+      .c-lytComTitle--name, .c-lytComTitle--desc {
+        padding: 0 60px 0 30px;
+        width: calc(100% - 136px);
+        flex: 0 0 auto;
+        font-size: $fontSizePC13;
+      }
+      [class^="c-lytComTitle--"]:nth-child(2):nth-last-child(1),
+      [class^="c-lytComTitle--"]:nth-child(1):nth-last-child(2) {
+        padding: 0;
+        width: 100%;
+      }
+      .c-lytComTitle--image {
+        width: 136px;
+        height: 76px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto 0;
+      }
+    }
+  }
+}
+
+/* .c-lytDatesHistory
+   ========================================================================== */
+.c-lytDatesHistory {
+  margin: calc(60 / 720 * 100vw) 0 0;
+  @extend %flexTwoFixedSide;
+
+  @include tab {
+    margin-top: 46px;
+  }
+}
+
+/* .c-lytFlexTwo flex（右要素に応じて左幅変化）
+   ========================================================================== */
+.c-lytFlexTwo {
+  @extend %flexTwoFixedSide;
+}
+
+/* .c-lytPcFlexTwo PC/Tabのみflex（右要素に応じて左幅変化）
+   ========================================================================== */
+.c-lytPcFlexTwo {
+  @include tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    > *:last-child {
+      flex: 1 0 auto;
+      margin: 0 0 0 20px;
+    }
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+/* .c-lytPcFlexThree PC/Tabのみflex（2つ目以降2カラム）
+   ========================================================================== */
+.c-lytPcFlexThree {
+  @include tab {
+    display: flex;
+    flex-wrap: wrap;
+
+    > *:first-child {
+      width: 100%;
+    }
+    > *:nth-child(n + 2) {
+      width: calc((100% - 30px) / 2);
+    }
+    > *:nth-child(even) {
+      margin-right: 30px;
+    }
+  }
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+/* .c-lytSide
+   ========================================================================== */
+.c-lytBtnSide {
+  margin: calc(30 / 750 * 100vw) 0 0;
+  display: flex;
+  justify-content: center;
+
+  @include tab {
+    margin-top: 20px;
+
+    [id^=aria-modal] + & {
+      margin-top: 70px;
+    }
+  }
+
+  .c-modalContentsArea & {
+    margin-top: calc(100 / 750 * 100vw);
+
+    @include miniLandscape {
+      margin-top: calc(50 / 750 * 100vw);
+    }
+
+    @include tab {
+      margin-top: 40px;
+    }
+  }
+
+  li {
+    margin: 0 calc(17 / 750 * 100vw) 0 0;
+    width: 100%;
+
+    @include tab {
+      margin-right: 20px;
+      width: 148px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    .c-btn._outline .c-btn__inner {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+}
+
+/* .c-lytOutside
+   ========================================================================== */
+.c-lytOutside {
+  @include tab {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}

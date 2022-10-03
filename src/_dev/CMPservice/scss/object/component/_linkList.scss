@@ -1,0 +1,315 @@
+/* --------------------------------------------------------------------------
+
+    Linklist
+
+   -------------------------------------------------------------------------- */
+/* .c-linkList-panel
+   ========================================================================== */
+.c-linkList-panel {
+  margin: calc(86 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 66px;
+  }
+
+  .c-searchResults + & {
+    margin-top: calc(60 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 38px;
+    }
+  }
+
+  li {
+
+    + li {
+      margin-top: calc(46 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 0;
+      }
+    }
+
+    a {
+      padding: calc(48 / 720 * 100vw) calc(36 / 720 * 100vw) 0;
+      display: block;
+      @include fontSizeSmall;
+      color: $baseFontColor1;
+      background-color: $whiteColor;
+
+      @include tab {
+        padding: 33px 24px 0 43px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @media all and (-ms-high-contrast: none) {
+          height: auto; /* IE */
+        }
+
+        > *:nth-last-child(2) {
+          margin-bottom: 10px;
+        }
+        > *:nth-last-child(2):not(.c-txtComments) {
+          margin-bottom: 35px;
+        }
+      }
+
+      @include pc {
+        transition: opacity .3s ease;
+
+        &:hover, &:focus {
+          opacity: .7;
+        }
+      }
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .c-txtDes {
+    margin-top: calc(20 / 720 * 100vw);
+    @include fontSizeBase;
+    font-weight: bold;
+    color: $baseFontColor2;
+    @include tab {
+      margin-top: 11px;
+    }
+  }
+  .c-txtComments {
+    margin-top: calc(15 / 720 * 100vw);
+    color: $yellowColor3;
+    @include tab {
+      margin-top: 4px;
+    }
+  }
+  .c-txtStatus {
+    margin: calc(60 / 720 * 100vw) calc(-36 / 720 * 100vw) 0;
+    padding: calc(22 / 720 * 100vw) calc(46 / 720 * 100vw) calc(20 / 720 * 100vw) calc(126 / 720 * 100vw);
+    display: block;
+    font-weight: normal;
+
+    @include tab {
+      margin: auto -24px 0 -43px;
+      padding: 14px 24px 14px 75px;
+      transition: padding .3s;
+    }
+    @media screen and (min-width: 720px) and (max-width: 780px) {
+      padding: 14px 18px 14px 55px;
+      font-size: $fontSizePC12;
+    }
+    @media screen and (min-width: 960px) and (max-width: 1060px) {
+      padding: 14px 18px 14px 46px;
+      font-size: $fontSizePC12;
+    }
+
+    &::before {
+      left: calc(46 / 720 * 100vw);
+
+      @include tab {
+        left: 28px;
+        transition: left .3s;
+      }
+      @media screen and (min-width: 720px) and (max-width: 780px) {
+        left: 12px;
+      }
+      @media screen and (min-width: 960px) and (max-width: 1060px) {
+        left: 9px;
+      }
+    }
+
+    &::after {
+      right: calc(22 / 720 * 100vw);
+      width: calc(16 / 720 * 100vw);
+      height: calc(16 / 720 * 100vw);
+      border-top: calc(3 / 720 * 100vw) solid $grayColor9;
+      border-left: calc(3 / 720 * 100vw) solid $grayColor9;
+      transform: rotate(135deg);
+
+      @include tab {
+        right: 13px;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+      }
+    }
+
+    &._reconsent::after, &._withdraw::after, &._end::after {
+      border-color: $whiteColor;
+    }
+  }
+  .c-txtComments + .c-txtStatus {
+    margin-top: calc(10 / 720 * 100vw);
+    @include tab {
+      margin-top: auto;
+    }
+  }
+}
+
+/* .c-linkList-company
+   ========================================================================== */
+.c-linkList-company {
+  margin: calc(37 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 42px;
+  }
+
+  .c-accordionDesc & {
+    margin-top: calc(28 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 12px;
+    }
+  }
+
+  li {
+    & + li {
+      margin-top: calc(14 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 4px;
+      }
+    }
+    a {
+      padding: calc(30 / 720 * 100vw) calc(70 / 720 * 100vw) calc(28 / 720 * 100vw) calc(32 / 720 * 100vw);
+      display: flex;
+      align-items: center;
+      width: 100%;
+      min-height: calc(155 / 720 * 100vw);
+      background-color: $whiteColor;
+      position: relative;
+
+      .c-accordionDesc & {
+        padding-left: calc(18 / 720 * 100vw);
+
+        @include tab {
+          padding-left: 0;
+        }
+      }
+
+      @include tab {
+        padding: 0;
+        align-items: stretch;
+        justify-content: space-between;
+        min-height: 76px;
+      }
+
+      @media all and (-ms-high-contrast: none) {
+        min-height: auto; /* IE */
+      }
+
+      @include pc {
+        &:hover, &:focus {
+          color: $baseFontColor1;
+
+          .c-txtList {
+            color: $linkHover;
+          }
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: calc(38 / 720 * 100vw);
+        z-index: 0;
+        width: calc(16 / 720 * 100vw);
+        height: calc(16 / 720 * 100vw);
+        border-right: calc(3 / 720 * 100vw) solid $grayColor3;
+        border-bottom: calc(3 / 720 * 100vw) solid $grayColor3;
+        transform: rotate(-45deg) translateY(-50%);
+
+        @include tab {
+          right: 40px;
+          width: 10px;
+          height: 10px;
+          border-width: 2px;
+
+          .c-accordionDesc & {
+            border-color: $whiteColor;
+          }
+        }
+      }
+      @include pc {
+        transition: border-color .3s ease;
+
+        &:hover::after, &:focus::after {
+          border-color: $linkHover;
+        }
+      }
+
+      > *:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  .c-txtCompany {
+    @include tab {
+      padding: 18px 50px 14px;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      font-weight: bold;
+    }
+
+    .c-accordionDesc & {
+      @include fontSizeSmall;
+      font-weight: normal;
+    }
+
+    /* IE（tab以下） */
+    @media all and (-ms-high-contrast: none) and (min-width: $break-point-tab) {
+      padding-top: 28px;
+      padding-bottom: 24px;
+    }
+  }
+  .c-txtList {
+    display: none;
+
+    @include tab {
+      margin-top: 0;
+      padding: 18px 70px 14px 15px;
+      width: 222px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      background-color: $grayColor10;
+
+      .c-accordionDesc & {
+        padding: 28px 62px 24px 15px;
+        width: 181px;
+        color: $whiteColor;
+        background-color: $greenColor1;
+      }
+    }
+    /* IE（tab以下） */
+    @media all and (-ms-high-contrast: none) and (min-width: $break-point-tab) {
+      padding-top: 28px;
+      padding-bottom: 24px;
+    }
+
+    @include pc {
+      transition: color .3s ease;
+    }
+  }
+}
+
+/* .c-linkList
+   ========================================================================== */
+.c-linkList {
+  li {
+    & + li {
+      margin-top: calc(24 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 5px;
+      }
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}

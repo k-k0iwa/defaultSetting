@@ -1,0 +1,31 @@
+/* --------------------------------------------------------------------------
+
+    Setting
+
+   -------------------------------------------------------------------------- */
+
+/* Media Query
+    ========================================================================== */
+@mixin sp {
+  @media print, screen and (max-width: $break-point-sp) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media print, screen and (min-width: $break-point-tab) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media print, screen and (min-width: $break-point-pc) {
+    @content;
+  }
+}
+
+/* Font
+   ========================================================================== */
+@mixin lh($fontSize, $lineHeight) {
+  line-height: ($fontSize / $lineHeight);
+}

@@ -1,0 +1,442 @@
+/* --------------------------------------------------------------------------
+
+    Forms
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%errorStyle {
+  border-color: $blackColor;
+  background-color: $linkHoverColor;
+}
+
+%inputText {
+  border: 1px solid $grayColor1;
+  border-radius: 4px;
+  background-color: $backgroundColor1;
+
+  &:focus {
+    border: 1px solid $linkHoverColor;
+    outline: none !important;
+  }
+
+  &:disabled {
+    border-color: $grayColor1;
+  }
+
+  .is-formError & {
+    @extend %errorStyle;
+  }
+}
+
+%burette {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: calc(26 / 720 * 100vw);
+  z-index: 0;
+  margin-top: calc(-6 / 720 * 100vw);
+  width: calc(15 / 720 * 100vw);
+  height: calc(15 / 720 * 100vw);
+  border-right: calc(2 / 720 * 100vw) solid $grayColor1;
+  border-bottom: calc(2 / 720 * 100vw) solid $grayColor1;
+  transform: rotate(45deg) translateY(-50%);
+
+  @include tab {
+    margin-top: -5px;
+    right: 14px;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+}
+
+
+/* input
+   ========================================================================== */
+// [type="text"], [type="number"], [type="tel"], [type="email"], [type="password"], [type="date"] {
+//   @extend %inputText;
+// }
+// [type="text"], [type="number"], [type="tel"], [type="email"], [type="password"] {
+//   padding: calc(16 / 720 * 100vw) calc(20 / 720 * 100vw) calc(10 / 720 * 100vw);
+
+//   @include tab {
+//     padding: 10px 14px 8px;
+//   }
+// }
+
+// [type="date"], .c-calendarFormPeriod [type="text"] {
+//   padding: calc(16 / 720 * 100vw) calc(42 / 720 * 100vw) calc(10 / 720 * 100vw) calc(12 / 720 * 100vw);
+//   min-height: calc(58 / 720 * 100vw);
+//   font-size: calc(25 / 720 * 100vw);
+//   line-height: 1;
+
+//   @include tab {
+//     padding: 13px 25px 11px 20px;
+//     min-height: auto;
+//     font-size: 1.5rem;
+
+//     // Safari
+//     _::-webkit-full-page-media, _:future, :root & {
+//         line-height: 1.5;
+//     }
+//   }
+// }
+
+// [type="search"] {
+//   @extend %inputText;
+//   padding: calc(16 / 720 * 100vw) calc(60 / 720 * 100vw) calc(10 / 720 * 100vw) calc(38 / 720 * 100vw);
+//   width: calc(510 / 720 * 100vw);
+//   min-height: calc(76 / 720 * 100vw);
+//   font-size: $fontSizeSP22;
+//   line-height: 1.5;
+//   border-radius: 45px;
+
+//   @include tab {
+//     padding: 14px 48px 12px 28px;
+//     width: 100%;
+//     max-width: 436px;
+//     min-height: 50px;
+//     font-size: $fontSizePC15;
+//     line-height: 1.666;
+//     border-radius: 25px;
+
+//     .c-searchForm._full & {
+//       width: 436px;
+//     }
+//   }
+
+//   .c-searchForm:not(._full) & {
+//     @media print, screen and (min-width: 720px) and (max-width: 790px) {
+//       max-width: 400px;
+//     }
+//     @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+//       max-width: 370px;
+//     }
+//   }
+// }
+
+
+/* textarea
+   ========================================================================== */
+// textarea {
+//   @extend %inputText;
+//   padding: calc(16 / 720 * 100vw) calc(20 / 720 * 100vw) calc(10 / 720 * 100vw);
+
+//   @include tab {
+//     padding: 10px 14px 8px;
+//   }
+// }
+
+
+/* select
+   ========================================================================== */
+// .c-selectForm {
+//   display: inline-block;
+//   position: relative;
+
+//   &::after {
+//     @extend %burette;
+//   }
+
+//   .is-formError &::after {
+//     border-color: $yellowColor3;
+//   }
+// }
+// select {
+//   @extend %inputText;
+//   padding: calc(16 / 720 * 100vw) calc(50 / 720 * 100vw) calc(10 / 720 * 100vw) calc(20 / 720 * 100vw);
+
+//   @include tab {
+//     padding: 13px 40px 11px 16px;
+//   }
+// }
+
+
+/* Radio
+   ========================================================================== */
+// .c-radioLabel {
+//   padding-left: calc(60 / 720 * 100vw);
+//   display: inline-block;
+//   position: relative;
+
+//   @include tab {
+//     padding-left: 32px;
+//   }
+
+//   &::before,
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     display: inline-block;
+//     border-radius: 50%;
+//   }
+//   &::before {
+//     top: 0;
+//     left: 0;
+//     z-index: 0;
+//     width: calc(34 / 720 * 100vw);
+//     height: calc(34 / 720 * 100vw);
+//     border: 2px solid $grayColor1;
+//     background-color: $whiteColor;
+
+//     @include tab {
+//       width: 20px;
+//       height: 20px;
+//     }
+
+//     .is-formError & {
+//       border-color: $yellowColor3;
+//       background-color: $yellowColor5;
+//     }
+//   }
+//   // Safari
+//   _::-webkit-full-page-media, _:future, :root &::before {
+//     top: calc(3 / 720 * 100vw);
+
+//     @include tab {
+//       top: 0;
+//     }
+//   }
+
+//   [type="radio"]:disabled + & {
+//     cursor: not-allowed;
+
+//     &::before {
+//       border-color: $grayColor11;
+//     }
+//   }
+
+//   [type="radio"]:checked + &::before {
+//     border-color: $yellowColor3;
+//     background-color: $yellowColor3;
+//     box-shadow: 0 0 0 pxtovw(7) $whiteColor inset;
+
+//     @include tab {
+//       box-shadow: 0 0 0 4px $whiteColor inset;
+//     }
+//   }
+
+//   [type="radio"]:focus + &::before {
+//     border-color: $focusColor;
+//   }
+// }
+
+
+/* Checkbox
+   ========================================================================== */
+// .c-checkboxLabel {
+//   padding-left: calc(64 / 720 * 100vw);
+//   display: inline-block;
+//   position: relative;
+
+//   @include tab {
+//     padding-left: 32px;
+//   }
+
+//   &::before,
+//   &::after {
+//     position: absolute;
+//     content: "";
+//     display: inline-block;
+//   }
+//   &::before {
+//     top: 0;
+//     left: 0;
+//     z-index: 0;
+//     width: calc(36 / 720 * 100vw);
+//     height: calc(36 / 720 * 100vw);
+//     border: 2px solid $grayColor1;
+//     border-radius: 2px;
+//     background-color: $whiteColor;
+
+//     @include tab {
+//       width: 20px;
+//       height: 20px;
+//     }
+
+//     .is-formError & {
+//       border-color: $yellowColor3;
+//       background-color: $yellowColor5;
+//     }
+//   }
+//   // Safari
+//   _::-webkit-full-page-media, _:future, :root &::before {
+//     top: calc(3 / 720 * 100vw);
+
+//     @include tab {
+//       top: 0;
+//     }
+//   }
+
+//   [type="checkbox"]:disabled + & {
+//     cursor: not-allowed;
+
+//     &::before {
+//       border-color: $grayColor11;
+//     }
+//   }
+
+//   [type="checkbox"]:checked + &::before {
+//     border-color: $yellowColor3;
+//   }
+
+//   [type="checkbox"]:focus + &::before {
+//     border-color: $focusColor;
+//   }
+
+//   [type="checkbox"]:checked + &::after {
+//     top: calc(10 / 720 * 100vw);
+//     left: calc(8 / 720 * 100vw);
+//     z-index: 1;
+//     width: calc(20 / 720 * 100vw);
+//     height: calc(10 / 720 * 100vw);
+//     border-left: calc(4 / 720 * 100vw) solid $yellowColor3;
+//     border-bottom: calc(4 / 720 * 100vw) solid $yellowColor3;
+//     transform: rotate(-45deg);
+
+//     @media screen and (min-width: 320px) and (max-width: 375px) {
+//       top: calc(13 / 720 * 100vw);
+//       left: calc(9 / 720 * 100vw);
+//     }
+
+//     @include tab {
+//       top: 5px;
+//       left: 4px;
+//       width: 13px;
+//       height: 7px;
+//       border-width: 2px;
+//     }
+//   }
+//   // Safari
+//   _::-webkit-full-page-media, _:future, :root [type="checkbox"]:checked + &::after {
+//     top: calc(15 / 720 * 100vw);
+
+//     @include tab {
+//       top: 5px;
+//     }
+//   }
+// }
+
+
+/* Toggle Switch by Checkbox
+   ========================================================================== */
+// .c-toggleSwitch {
+//   width: calc(90 / 720 * 100vw);
+//   height: calc(52 / 720 * 100vw);
+//   position: relative;
+
+//   @include tab {
+//     width: 45px;
+//     height: 26px;
+//   }
+
+//   [type="checkbox"] {
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     width: 100%;
+//     height: 100%;
+//     cursor: pointer;
+
+//     &:disabled {
+//       cursor: not-allowed;
+//     }
+//   }
+
+//   &__checkbox {
+//     width: calc(90 / 720 * 100vw);
+//     height: calc(52 / 720 * 100vw);
+//     display: inline-block;
+
+//     @include tab {
+//       width: 45px;
+//       height: 26px;
+//     }
+
+//     &Inner {
+//       display: inline-block;
+//       width: 100%;
+//       height: 100%;
+//       border: calc(4 / 720 * 100vw) solid $grayColor3;
+//       border-radius: 26px;
+//       background-color: $grayColor3;
+//       transition: all .2s ease;
+//       position: relative;
+
+//       @include tab {
+//         border-width: 2px;
+//         border-radius: 13px;
+//       }
+
+//       &::before {
+//         position: relative;
+//         content: "";
+//         top: 50%;
+//         left: 0;
+//         z-index: 1;
+//         transform: translateY(-50%);
+//         display: block;
+//         width: 50%;
+//         height: 100%;
+//         border-radius: 50%;
+//         background-color: $whiteColor;
+//         transition: left .2s ease;
+//       }
+//     }
+
+//     [type="checkbox"]:checked + & {
+//       .c-toggleSwitch__checkboxInner {
+//         border-color: $greenColor1;
+//         background-color: $greenColor1;
+
+//         &::before {
+//           left: 50%; //calc指定ではIE&Edgeでスムーズにスライドできない
+//         }
+//       }
+//     }
+
+//     [type="checkbox"]:disabled + & .c-toggleSwitch__checkboxInner {
+//         border-color: $grayColor12;
+//         background-color: $grayColor12;
+//     }
+
+//     [type="checkbox"]:focus + & {
+//       outline: none;
+
+//       .c-toggleSwitch__checkboxInner {
+//         border: calc(4 / 720 * 100vw) solid $focusColor;
+
+//         @include tab {
+//           border-width: 2px;
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+/* Radio and Checkbox side by side
+   ========================================================================== */
+// .c-listChoice-side {
+//   .c-tableLayout td & {
+//     margin-top: calc(-38 / 720 * 100vw);
+
+//     @include tab {
+//       margin-top: -20px;
+//     }
+//   }
+
+//   > li {
+//     margin-top: 0;
+//     padding: calc(38 / 720 * 100vw) calc(40 / 720 * 100vw) 0 0;
+//     display: inline-block;
+
+//     @include tab {
+//       padding: 20px 28px 0 0;
+//     }
+//   }
+// }
+
+/* Name
+   ========================================================================== */

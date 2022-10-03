@@ -1,0 +1,122 @@
+/* --------------------------------------------------------------------------
+
+    Contents Width
+
+   -------------------------------------------------------------------------- */
+$viewMinWidth: 320px;
+$contents-width: 933px; //833+50*2
+
+
+/* --------------------------------------------------------------------------
+
+    Media Query
+
+   -------------------------------------------------------------------------- */
+$break-point-tab: 720px;
+$break-point-pc: 960px;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Size
+
+   -------------------------------------------------------------------------- */
+/* SP
+   ========================================================================== */
+$fontSize10: 10px;
+$fontSizeSP18: calc(18 / 720 * 100vw);
+$fontSizeSP20: calc(20 / 720 * 100vw);
+$fontSizeSP22: calc(22 / 720 * 100vw);
+$fontSizeSP24: calc(24 / 720 * 100vw);
+$fontSizeSP28: calc(28 / 720 * 100vw);
+$fontSizeSP30: calc(30 / 720 * 100vw);
+$fontSizeSP70: calc(70 / 720 * 100vw);
+
+/* PC
+   ========================================================================== */
+$fontSizePC9: .9rem;
+$fontSizePC11: 1.1rem;
+$fontSizePC12: 1.2rem;
+$fontSizePC13: 1.3rem;
+$fontSizePC15: 1.5rem;
+$fontSizePC18: 1.8rem;
+$fontSizePC24: 2.4rem;
+$fontSizePC60: 6rem;
+$fontSizePC80: 8rem;
+
+
+/* --------------------------------------------------------------------------
+
+    Font Color
+
+   -------------------------------------------------------------------------- */
+/* General
+   ========================================================================== */
+$whiteColor: #fff;
+$blackColor: #000;
+$transparentColor: transparent;
+
+/* Other
+   ========================================================================== */
+$baseFontColor1: #7a7a7a;
+$baseFontColor2: #8e8e8e;
+$baseFontColor3: #7e7e7e;
+$baseFontColor4: #606060;
+
+$grayColor1: #757575;
+$grayColor2: #b2b2b2;
+$grayColor3: #adadad;
+$grayColor4: #efefef;
+$grayColor5: #f6f6f6;
+$grayColor6: #4b4b4b;
+$grayColor7: #cbcbcb;
+$grayColor8: #d6d6d6;
+$grayColor9: #989898;
+$grayColor10: #dfdfdf;
+$grayColor11: #e3e3e3;
+$grayColor12: #d2d2d2;
+$grayColor13: #dbdbdb;
+$grayColor14: #eceae2;
+$grayColor15: #c6c3b7;
+
+$backgroundColor1: #fafafa;
+$backgroundColor2: #eee;
+$backgroundColor3: #f5f7f8;
+
+$greenColor1: #88d5d1;
+$greenColor1Hover: #72c4c0;
+$greenColor2: #f4fdfd;
+$greenColor3: #d2e9e7;
+$greenColor4: #ccebea;
+
+$purpleColor1: #e799d0;
+$purpleColor2: #eeb8de;
+
+$yellowColor1: #fffae6;
+$yellowColor2: #fff9a9;
+$yellowColor3: #f0a900;
+$yellowColor4: #fdf9bc;
+$yellowColor5: #fffaef;
+$yellowColor6: #a79a86;
+$yellowColor7: #ffd700;
+
+$alphaColor1: rgba(0, 0, 0, .3);
+$alphaColor2: rgba(255, 255, 255, .7);
+$alphaColor3: rgba(255, 255, 255, .1);
+$alphaColor4: rgba(255, 255, 255, .3);
+
+// $link: #f00;
+$linkHover: #609bbd;
+$focusColor: #00a0ea;
+// $gradationColor1: linear-gradient(#e2ede7, #cde6f3);
+
+/* --------------------------------------------------------------------------
+
+    Function
+
+   -------------------------------------------------------------------------- */
+/* px to vw
+   ========================================================================== */
+@function pxtovw($num, $width: 719) {
+  @return (1vw * $num / $width * 100);
+}

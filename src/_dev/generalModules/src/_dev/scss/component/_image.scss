@@ -1,0 +1,56 @@
+/*--------------------------------
+  One
+--------------------------------*/
+.c-img-single {
+  margin: 0 auto;
+  max-width: 600px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/*--------------------------------
+  Image & Text
+--------------------------------*/
+.c-img-lyt {
+  display: flex;
+  flex-direction: column;
+  @include tab {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & + & {
+    margin-top: 40px;
+  }
+
+  &__txt {
+    padding: 20px 0 0;
+    order: 2;
+  }
+  &__img {
+    order: 1;
+  }
+  &__txt > *:first-child {
+    margin-top: 0;
+  }
+
+  @include tab {
+    &__txt, &__img {
+      width: 50%;
+    }
+    ._left &__txt {
+      padding: 0 0 0 30px;
+    }
+    ._right &__txt {
+      padding: 0 30px 0 0;
+      order: 1;
+    }
+    ._right &__img {
+      order: 2;
+    }
+  }
+}

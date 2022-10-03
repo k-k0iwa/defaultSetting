@@ -1,0 +1,92 @@
+/* --------------------------------------------------------------------------
+
+    Navigation
+
+   -------------------------------------------------------------------------- */
+/* .l-spmenu
+   ----------------------------------------------------------------- */
+.l-spmenu {
+  transition: .3s ease;
+
+  &[aria-hidden="false"] {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 58px;
+    left: 0;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+/* .l-globalNav
+   ----------------------------------------------------------------- */
+.l-globalNav {
+  margin-top: 58px;
+  padding: calc(40 / 720 * 100vw) calc(30 / 720 * 100vw);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: $whiteColor;
+  transition: .3s ease;
+
+  @include miniLandscape {
+    font-size: $fontSizeSP18;
+  }
+
+  @include pc {
+    margin-top: 0;
+    padding: 60px 20px 40px;
+    width: 240px;
+    position: static;
+  }
+
+  .l-spmenu[aria-hidden="false"] & {
+    right: -20%;
+    overflow-y: auto;
+    max-height: calc(100vh - 58px);
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  [aria-describedby="current"] {
+    color: $yellowColor3;
+  }
+}
+
+/* .l-breadcrumb
+   ----------------------------------------------------------------- */
+.l-breadcrumb {
+  margin: 0;
+  line-height: 1;
+
+  li {
+    display: inline;
+    @include fontSizeTiny;
+      a {
+        color: $baseFontColor4;
+
+        @include pc {
+          &[href]:hover, &[href]:focus {
+            color: $linkHover;
+          }
+        }
+      }
+  }
+
+  li + li::before {
+    padding: 0 calc(16 / 720 * 100vw) 0 calc(13 / 720 * 100vw);
+    display: inline-block;
+    content: ">";
+    color: $baseFontColor4;
+
+    @include tab {
+      padding: 0 12px 0 8px;
+    }
+  }
+}

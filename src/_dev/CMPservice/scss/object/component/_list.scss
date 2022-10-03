@@ -1,0 +1,384 @@
+/* --------------------------------------------------------------------------
+
+    List
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%dlCommonStyle {
+  dt {
+    font-weight: bold;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+  dd {
+    > *:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+/* List Disc
+   ========================================================================== */
+.c-listDisc {
+  margin: calc(30 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    padding-left: 1.2em;
+    position: relative;
+    @include fontSizeBase;
+
+    & + li {
+      margin-top: 10px;
+    }
+
+    > .c-listDisc, > .c-listNumber, > .c-listMrk, > .c-listNote {
+      margin-top: calc(20 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 5px;
+        & li + li {
+          margin-top: 5px;
+        }
+      }
+    }
+    > .c-listDisc > li::before {
+      background-color: $grayColor3;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: calc(10 / 720 * 100vw);
+      height: calc(10 / 720 * 100vw);
+      display: inline-block;
+      margin-top: calc(6 / 720 * 100vw);
+      background-color: $yellowColor3;
+      border-radius: 50%;
+
+      @include tab {
+        left: 3px;
+        width: 8px;
+        height: 8px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+/* List Number
+   ========================================================================== */
+.c-listNumber {
+  margin: calc(30 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+  counter-reset: num;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+    @include fontSizeBase;
+
+    &::before, & > .c-listNumber--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    &::before {
+      padding-right: .5em;
+      counter-increment: num;
+      // content: counter(num)".";
+      content: counters(num, ".") ".";
+      white-space: pre;
+    }
+    & > .c-listNumber--txt {
+      padding-bottom: .5em;
+      width: 100%;
+
+      > .c-listDisc, > .c-listNumber, > .c-listMrk, > .c-listNote {
+        margin-top: calc(20 / 720 * 100vw);
+        @include tab {
+          margin-top: 5px;
+          & li + li {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    &:last-child > .c-listNumber--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* List Mark
+   ========================================================================== */
+.c-listMrk {
+  margin: calc(20 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+    @include fontSizeBase;
+
+    .c-listDisc, .c-listNumber, .c-listMrk, .c-listNote {
+      margin-top: calc(20 / 720 * 100vw);
+      @include tab {
+        margin-top: 5px;
+      }
+    }
+
+    .c-listMrk--mrk, .c-listMrk--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-listMrk--mrk {
+      padding-right: 6px;
+      // text-align: right;
+      white-space: pre;
+    }
+    .c-listMrk--txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+    }
+
+    &:last-child .c-listMrk--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* List Note
+   ========================================================================== */
+.c-listNote {
+  margin: calc(20 / 720 * 100vw) 0 0;
+  display: table;
+  width: 100%;
+
+  @include tab {
+    margin-top: 20px;
+  }
+
+  > li {
+    display: table-row;
+    @include fontSizeSmall;
+
+    .c-listNote--ast, .c-listNote--txt {
+      display: table-cell;
+      vertical-align: top;
+    }
+    .c-listNote--ast {
+      padding-right: 6px;
+      white-space: pre;
+    }
+    .c-listNote--txt {
+      padding-bottom: 10px;
+      width: 100%;
+      font-size: 100%;
+    }
+
+    &:last-child .c-listNote--txt {
+      padding-bottom: 0;
+    }
+  }
+}
+
+/* List Data Item
+   ========================================================================== */
+.c-listDataItem {
+  margin-left: calc(-28 / 720 * 100vw);
+  margin-right: calc(-28 / 720 * 100vw);
+
+  @include tab {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  li {
+    padding: calc(24 / 720 * 100vw) calc(27 / 720 * 100vw) calc(20 / 720 * 100vw);
+    min-height: calc(124 / 720 * 100vw);
+    font-weight: bold;
+    background-color: $grayColor5;
+
+    @include tab {
+      padding: 10px 14px 8px;
+      min-height: 62px;
+    }
+
+    & + li {
+      margin-top: calc(6 / 720 * 100vw);
+
+      @include tab {
+        margin-top: 1px;
+      }
+    }
+  }
+}
+
+/* List dl
+   ========================================================================== */
+.c-searchResults {
+  margin: calc(60 / 720 * 100vw) 0 0;
+  display: inline-flex;
+
+  @include tab {
+    margin-top: 34px;
+  }
+
+  dt::after {
+    content: "\FF1A"; //ï¼š
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  dd {
+    margin-top: 0;
+  }
+}
+
+.c-dl {
+  @extend %dlCommonStyle;
+  margin: calc(50 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 24px;
+  }
+
+  dt {
+    margin-top: calc(44 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 24px;
+    }
+  }
+  dd {
+    margin-top: calc(26 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 16px;
+    }
+  }
+
+  dt, dd {
+    font-size: $fontSizeSP24;
+    line-height: 1.916;
+
+    @include tab {
+      font-size: $fontSizePC13;
+      line-height: 1.769;
+    }
+  }
+
+  &._upperRelation {
+    @include tab {
+      margin-top: 12px;
+
+      dd {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &._purpose {
+    @include tab {
+      dd {
+        margin-top: 38px;
+      }
+    }
+  }
+  .c-reduceDisplay._purpose & {
+    @include tab {
+      margin-top: 93px;
+      padding: 0 18px;
+    }
+  }
+}
+
+.c-dlSide {
+  margin: calc(30 / 720 * 100vw) 0 0;
+
+  @include tab {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &._thirdparty {
+      padding: 25px 0;
+      position: relative;
+
+      .c-linkTxt {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+      }
+    }
+  }
+  @extend %dlCommonStyle;
+
+  dt {
+    margin-top: calc(30 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+      width: 20%;
+    }
+  }
+  dd {
+    margin-top: calc(20 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 0;
+      flex: 1;
+    }
+  }
+  &._thirdparty dd {
+    margin-top: calc(35 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 0;
+    }
+  }
+
+  dt, dd {
+    font-size: $fontSizeSP24;
+    line-height: 1.916;
+
+    @include tab {
+      font-size: $fontSizePC15;
+      line-height: 1.666;
+    }
+  }
+
+  .c-lytComTitle {
+    padding: 0;
+    background-color: $transparentColor;
+  }
+
+  &._small {
+    @include tab {
+      dt, dd,
+      .c-lytComTitle--name, .c-lytComTitle--desc {
+        font-size: $fontSizePC13;
+      }
+      .c-lytComTitle--image {
+        width: 108px;
+      }
+    }
+  }
+}

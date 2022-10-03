@@ -1,0 +1,41 @@
+/* --------------------------------------------------------------------------
+
+    Section / Area
+
+   -------------------------------------------------------------------------- */
+/* base
+   ========================================================================== */
+.c-mainContents {
+  margin: calc(60 / 720 * 100vw) auto 0;
+  @include pc {
+    margin-top: 100px;
+  }
+}
+
+.c-section {
+  margin: calc(40 / 720 * 100vw) 0 0;
+  @include tab {
+    margin-top: 80px;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+/* .c-searchResults
+   ========================================================================== */
+.c-areaNoResults {
+  margin-top: calc(120 / 720 * 100vw);
+  padding-bottom: calc(120 / 720 * 100vw);
+  text-align: center;
+
+  @include tab {
+    margin-top: 106px;
+    padding-bottom: 78px;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}

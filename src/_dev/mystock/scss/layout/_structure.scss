@@ -1,0 +1,29 @@
+/* --------------------------------------------------------------------------
+
+    Structure
+
+   -------------------------------------------------------------------------- */
+// .l-container {
+//   display: flex; //少量コンテンツ時にフッター下固定用
+//   flex-direction: column; //少量コンテンツ時にフッター下固定用
+//   height: 100%;
+//   min-height: 100vh;
+
+//   @include pc {
+//     position: relative; //header固定切替用
+//   }
+// }
+
+// .l-contents__inner {
+//   margin: 0 auto;
+//   padding: calc(8 / 720 * 100vw) calc(26 / 720 * 100vw) calc(124 / 720 * 100vw);
+//   width: 100%;
+//   max-width: $contents-width;
+
+//   @include pc {
+//     padding: 10px 50px 98px;
+//   }
+//   & > *:first-child {
+//     margin-top: 0;
+//   }
+// }

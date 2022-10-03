@@ -1,0 +1,732 @@
+/* --------------------------------------------------------------------------
+
+    Forms
+
+   -------------------------------------------------------------------------- */
+/* extend
+   ========================================================================== */
+%errorStyle {
+  border-color: $yellowColor3;
+  background-color: $yellowColor5;
+}
+
+%inputText {
+  border: 1px solid $grayColor7;
+  border-radius: 4px;
+  background-color: $backgroundColor1;
+
+  &:focus {
+    border: 1px solid $focusColor;
+    outline: none !important;
+  }
+
+  &:disabled {
+    border-color: $grayColor11;
+  }
+
+  .is-formError & {
+    @extend %errorStyle;
+  }
+}
+
+%burette {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: calc(26 / 720 * 100vw);
+  z-index: 0;
+  margin-top: calc(-6 / 720 * 100vw);
+  width: calc(15 / 720 * 100vw);
+  height: calc(15 / 720 * 100vw);
+  border-right: calc(2 / 720 * 100vw) solid $grayColor9;
+  border-bottom: calc(2 / 720 * 100vw) solid $grayColor9;
+  transform: rotate(45deg) translateY(-50%);
+
+  @include tab {
+    margin-top: -5px;
+    right: 14px;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+  }
+}
+
+
+/* input
+   ========================================================================== */
+[type="text"], [type="number"], [type="tel"], [type="email"], [type="password"], [type="date"] {
+  @extend %inputText;
+}
+[type="text"], [type="number"], [type="tel"], [type="email"], [type="password"] {
+  padding: calc(16 / 720 * 100vw) calc(20 / 720 * 100vw) calc(10 / 720 * 100vw);
+
+  @include tab {
+    padding: 10px 14px 8px;
+  }
+}
+
+[type="date"], .c-calendarFormPeriod [type="text"] {
+  padding: calc(16 / 720 * 100vw) calc(42 / 720 * 100vw) calc(10 / 720 * 100vw) calc(12 / 720 * 100vw);
+  min-height: calc(58 / 720 * 100vw);
+  font-size: calc(25 / 720 * 100vw);
+  line-height: 1;
+
+  @include tab {
+    padding: 13px 25px 11px 20px;
+    min-height: auto;
+    font-size: 1.5rem;
+
+    // Safari
+    _::-webkit-full-page-media, _:future, :root & {
+        line-height: 1.5;
+    }
+  }
+}
+
+[type="search"] {
+  @extend %inputText;
+  padding: calc(16 / 720 * 100vw) calc(60 / 720 * 100vw) calc(10 / 720 * 100vw) calc(38 / 720 * 100vw);
+  width: calc(510 / 720 * 100vw);
+  min-height: calc(76 / 720 * 100vw);
+  font-size: $fontSizeSP22;
+  line-height: 1.5;
+  border-radius: 45px;
+
+  @include tab {
+    padding: 14px 48px 12px 28px;
+    width: 100%;
+    max-width: 436px;
+    min-height: 50px;
+    font-size: $fontSizePC15;
+    line-height: 1.666;
+    border-radius: 25px;
+
+    .c-searchForm._full & {
+      width: 436px;
+    }
+  }
+
+  .c-searchForm:not(._full) & {
+    @include landscape {
+      max-width: 370px;
+    }
+    @media print, screen and (min-width: 720px) and (max-width: 790px) {
+      max-width: 400px;
+    }
+    @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+      max-width: 370px;
+    }
+  }
+}
+
+
+/* textarea
+   ========================================================================== */
+textarea {
+  @extend %inputText;
+  padding: calc(16 / 720 * 100vw) calc(20 / 720 * 100vw) calc(10 / 720 * 100vw);
+
+  @include tab {
+    padding: 10px 14px 8px;
+  }
+}
+
+
+/* select
+   ========================================================================== */
+.c-selectForm {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    @extend %burette;
+  }
+
+  .is-formError &::after {
+    border-color: $yellowColor3;
+  }
+}
+select {
+  @extend %inputText;
+  padding: calc(16 / 720 * 100vw) calc(50 / 720 * 100vw) calc(10 / 720 * 100vw) calc(20 / 720 * 100vw);
+
+  @include tab {
+    padding: 13px 40px 11px 16px;
+  }
+}
+
+
+/* Radio
+   ========================================================================== */
+.c-radioLabel {
+  padding-left: calc(60 / 720 * 100vw);
+  display: inline-block;
+  position: relative;
+
+  @include tab {
+    padding-left: 32px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: calc(34 / 720 * 100vw);
+    height: calc(34 / 720 * 100vw);
+    border: 2px solid $grayColor1;
+    background-color: $whiteColor;
+
+    @include tab {
+      width: 20px;
+      height: 20px;
+    }
+
+    .is-formError & {
+      border-color: $yellowColor3;
+      background-color: $yellowColor5;
+    }
+  }
+  // Safari
+  _::-webkit-full-page-media, _:future, :root &::before {
+    top: calc(3 / 720 * 100vw);
+
+    @include tab {
+      top: 0;
+    }
+  }
+
+  [type="radio"]:disabled + & {
+    cursor: not-allowed;
+
+    &::before {
+      border-color: $grayColor11;
+    }
+  }
+
+  [type="radio"]:checked + &::before {
+    border-color: $yellowColor3;
+    background-color: $yellowColor3;
+    box-shadow: 0 0 0 pxtovw(7) $whiteColor inset;
+
+    @include tab {
+      box-shadow: 0 0 0 4px $whiteColor inset;
+    }
+  }
+
+  [type="radio"]:focus + &::before {
+    border-color: $focusColor;
+  }
+}
+
+
+/* Checkbox
+   ========================================================================== */
+.c-checkboxLabel {
+  padding-left: calc(64 / 720 * 100vw);
+  display: inline-block;
+  position: relative;
+
+  @include tab {
+    padding-left: 32px;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+  }
+  &::before {
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: calc(36 / 720 * 100vw);
+    height: calc(36 / 720 * 100vw);
+    border: 2px solid $grayColor1;
+    border-radius: 2px;
+    background-color: $whiteColor;
+
+    @include tab {
+      width: 20px;
+      height: 20px;
+    }
+
+    .is-formError & {
+      border-color: $yellowColor3;
+      background-color: $yellowColor5;
+    }
+  }
+  // Safari
+  _::-webkit-full-page-media, _:future, :root &::before {
+    top: calc(3 / 720 * 100vw);
+
+    @include tab {
+      top: 0;
+    }
+  }
+
+  [type="checkbox"]:disabled + & {
+    cursor: not-allowed;
+
+    &::before {
+      border-color: $grayColor11;
+    }
+  }
+
+  [type="checkbox"]:checked + &::before {
+    border-color: $yellowColor3;
+  }
+
+  [type="checkbox"]:focus + &::before {
+    border-color: $focusColor;
+  }
+
+  [type="checkbox"]:checked + &::after {
+    top: calc(10 / 720 * 100vw);
+    left: calc(8 / 720 * 100vw);
+    z-index: 1;
+    width: calc(20 / 720 * 100vw);
+    height: calc(10 / 720 * 100vw);
+    border-left: calc(4 / 720 * 100vw) solid $yellowColor3;
+    border-bottom: calc(4 / 720 * 100vw) solid $yellowColor3;
+    transform: rotate(-45deg);
+
+    @media screen and (min-width: 320px) and (max-width: 375px) {
+      top: calc(13 / 720 * 100vw);
+      left: calc(9 / 720 * 100vw);
+    }
+
+    @include tab {
+      top: 5px;
+      left: 4px;
+      width: 13px;
+      height: 7px;
+      border-width: 2px;
+    }
+  }
+  // Safari
+  _::-webkit-full-page-media, _:future, :root [type="checkbox"]:checked + &::after {
+    top: calc(15 / 720 * 100vw);
+
+    @include tab {
+      top: 5px;
+    }
+  }
+}
+
+
+/* Toggle Switch by Checkbox
+   ========================================================================== */
+.c-toggleSwitch {
+  width: calc(90 / 720 * 100vw);
+  height: calc(52 / 720 * 100vw);
+  position: relative;
+
+  @include tab {
+    width: 45px;
+    height: 26px;
+  }
+
+  [type="checkbox"] {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__checkbox {
+    width: calc(90 / 720 * 100vw);
+    height: calc(52 / 720 * 100vw);
+    display: inline-block;
+
+    @include tab {
+      width: 45px;
+      height: 26px;
+    }
+
+    &Inner {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border: calc(4 / 720 * 100vw) solid $grayColor3;
+      border-radius: 26px;
+      background-color: $grayColor3;
+      transition: all .2s ease;
+      position: relative;
+
+      @include tab {
+        border-width: 2px;
+        border-radius: 13px;
+      }
+
+      &::before {
+        position: relative;
+        content: "";
+        top: 50%;
+        left: 0;
+        z-index: 1;
+        transform: translateY(-50%);
+        display: block;
+        width: 50%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $whiteColor;
+        transition: left .2s ease;
+      }
+    }
+
+    [type="checkbox"]:checked + & {
+      .c-toggleSwitch__checkboxInner {
+        border-color: $greenColor1;
+        background-color: $greenColor1;
+
+        &::before {
+          left: 50%; //calc指定ではIE&Edgeでスムーズにスライドできない
+        }
+      }
+    }
+
+    [type="checkbox"]:disabled + & .c-toggleSwitch__checkboxInner {
+        border-color: $grayColor12;
+        background-color: $grayColor12;
+    }
+
+    [type="checkbox"]:focus + & {
+      outline: none;
+
+      .c-toggleSwitch__checkboxInner {
+        border: calc(4 / 720 * 100vw) solid $focusColor;
+
+        @include tab {
+          border-width: 2px;
+        }
+      }
+    }
+  }
+}
+
+
+/* Radio and Checkbox side by side
+   ========================================================================== */
+.c-listChoice-side {
+  .c-tableLayout td & {
+    margin-top: calc(-38 / 720 * 100vw);
+
+    @include tab {
+      margin-top: -20px;
+    }
+  }
+
+  > li {
+    margin-top: 0;
+    padding: calc(38 / 720 * 100vw) calc(40 / 720 * 100vw) 0 0;
+    display: inline-block;
+
+    @include tab {
+      padding: 20px 28px 0 0;
+    }
+  }
+}
+
+
+/* Others
+   ========================================================================== */
+// 検索窓
+.c-searchForm {
+  margin: calc(46 / 720 * 100vw) 0 0;
+  text-align: center;
+
+  @include tab {
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+
+    .c-btn {
+      margin-top: 0;
+      display: inline-block;
+
+      .c-btn__inner {
+        max-width: 176px;
+
+        @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+          width: auto;
+        }
+      }
+    }
+
+    &._full {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &-inner {
+    display: inline-block;
+    position: relative;
+
+    @include tab {
+      padding-left: 40px;
+      // width: 70%;
+      width: calc(650 / 833 * 100vw);
+      transition: padding-left .3s;
+
+      .c-searchForm._full & {
+        padding-left: 0;
+        width: auto;
+      }
+    }
+    .c-searchForm:not(._full) & {
+      @include landscape {
+        padding-left: 0;
+        width: calc(400 / 667 * 100vw);
+      }
+      @media print, screen and (min-width: 720px) and (max-width: 790px) {
+        padding-left: 0;
+        width: calc(430 / 720 * 100vw);
+      }
+      @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+        padding-left: 0;
+        width: calc(410 / 960 * 100vw);
+      }
+    }
+  }
+}
+
+// 検索ボタン
+.c-submitBtn-icon {
+  position: absolute;
+  top: 50%;
+  left: calc(450 / 720 * 100vw);
+  transform: translateY(-50%);
+  width: calc(40 / 720 * 100vw);
+  height: calc(40 / 720 * 100vw);
+
+  @include tab {
+    left: 433px;
+    width: 22px;
+    height: 22px;
+    transition: left .3s;
+
+    .c-searchForm._full & {
+      left: 393px;
+    }
+  }
+  .c-searchForm:not(._full) & {
+    @include landscape {
+      left: 330px;
+    }
+    @media print, screen and (min-width: 720px) and (max-width: 790px) {
+      left: 360px;
+    }
+    @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+      left: 330px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    width: calc(30 / 720 * 100vw);
+    height: calc(30 / 720 * 100vw);
+    background: url(../../common/images/icon_search.svg) no-repeat;
+
+    @include tab {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+// クリアボタン
+.c-clearBtn {
+  margin-left: calc(20 / 720 * 100vw);
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: calc(20 / 720 * 100vw);
+  height: calc(20 / 720 * 100vw);
+
+  @include tab {
+    margin-left: 14px;
+    width: 22px;
+    height: 22px;
+    transition: margin-left .3s;
+  }
+  .c-searchForm:not(._full) & {
+    @include landscape {
+      margin-left: 0;
+    }
+    @media print, screen and (min-width: 720px) and (max-width: 790px) {
+      margin-left: 0;
+    }
+    @media print, screen and (min-width: 960px) and (max-width: 1100px) {
+      margin-left: 0;
+    }
+  }
+  html:not([data-script-enabled="true"]) & {
+    display: none;
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: calc(26 / 720 * 100vw);
+    height: 3px;
+    background-color: $baseFontColor1;
+
+    @include tab {
+      width: 22px;
+    }
+  }
+  &::before {
+    transform: rotate(-45deg);
+  }
+  &::after {
+    transform: rotate(45deg);
+  }
+  @include pc {
+    transition: .3s ease;
+
+    &:not([disabled]):hover::before, &:not([disabled]):hover::after {
+      background-color: $linkHover;
+    }
+  }
+}
+
+// カレンダー
+.c-calendarForm {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    @extend %burette;
+  }
+
+  .is-formError &::after {
+    border-color: $yellowColor3;
+  }
+}
+.c-calendarFormPeriod {
+  display: flex;
+  width: 100%;
+
+  .c-calendarForm {
+    margin: calc(20 / 720 * 100vw) calc(76 / 720 * 100vw) 0 0;
+    width: calc((100% - calc(76 / 720 * 100vw)) / 2);
+
+    @include tab {
+      margin: 20px 50px 0 0;
+      width: 162px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "\FF5E";// ～
+      top: 50%;
+      right: calc(-50 / 720 * 100vw);
+      transform: translateY(-50%);
+      font-weight: bold;
+      line-height: 1;
+
+      @include tab {
+        right: -32px;
+      }
+    }
+
+    & + .c-calendarForm {
+      margin-right: 0;
+
+      &::before {
+        position: static;
+        content: none;
+      }
+    }
+  }
+}
+
+// 「検索条件を追加」で表示されるエリア
+.c-conditionForm {
+  margin: calc(28 / 720 * 100vw) 0 0;
+  padding: calc(36 / 720 * 100vw) calc(46 / 720 * 100vw) calc(30 / 720 * 100vw);
+  height: auto;
+  background-color: $whiteColor;
+
+  [data-script-enabled="true"] & {
+    display: none;
+  }
+
+  @include tab {
+    margin-top: 13px;
+    padding: 14px 26px 28px;
+  }
+
+  > *:first-child {
+    margin-top: 0;
+  }
+}
+
+// fieldsetグループレイアウト*flexを使えないのでdivで代用
+.c-formGroup {
+  @include tab {
+    display: flex;
+    width: 100%;
+  }
+  &--label {
+    font-weight: bold;
+
+    @include tab {
+      margin-right: 10px;
+      display: block;
+      min-width: 130px;
+    }
+  }
+  &--parts {
+    margin-top: calc(34 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 0;
+      flex: 1;
+    }
+
+    > *:first-child,
+    > .c-calendarForm {
+      margin-top: 0;
+    }
+    > *:first-child {
+      padding-top: 0;
+    }
+  }
+
+  & + & {
+    margin-top: calc(70 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 47px;
+    }
+  }
+}

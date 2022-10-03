@@ -1,0 +1,73 @@
+/*--------------------------------
+  Contents Width
+--------------------------------*/
+$viewMinWidth: 320px;
+$pcContentsWidth: 1000px;
+$pcContentsInnerWidth: 960px;
+
+/*--------------------------------
+  Media Query
+  SP:-599px / Tab:600px-1024px / PC:1025px-
+--------------------------------*/
+$break-point-sp: 599px;
+$break-point-tab: 600px;
+$break-point-pc: 1025px;
+
+/*--------------------------------
+  Font Size
+--------------------------------*/
+$fontSize10: 10px;
+
+/*------ SP -------*/
+$fontSizeSp9: calc(18 / 600 * 100vw);
+$fontSizeSp10: calc(20 / 600 * 100vw);
+$fontSizeSp11: calc(22 / 600 * 100vw);
+$fontSizeSp12: calc(24 / 600 * 100vw);
+$fontSizeSp14: calc(28 / 600 * 100vw);
+$fontSizeSp15: calc(30 / 600 * 100vw);
+$fontSizeSp16: calc(32 / 600 * 100vw);
+$fontSizeSp17: calc(34 / 600 * 100vw);
+$fontSizeSp19: calc(38 / 600 * 100vw);
+$fontSizeSp20: calc(40 / 600 * 100vw);
+
+/*------ PC -------*/
+$fontSizePc11: 1.1rem;
+$fontSizePc12: 1.2rem;
+$fontSizePc13: 1.3rem;
+$fontSizePc14: 1.4rem;
+$fontSizePc15: 1.5rem;
+$fontSizePc16: 1.6rem;
+$fontSizePc17: 1.7rem;
+$fontSizePc18: 1.8rem;
+$fontSizePc19: 1.9rem;
+$fontSizePc20: 2rem;
+$fontSizePc21: 2.1rem;
+$fontSizePc22: 2.2rem;
+$fontSizePc23: 2.3rem;
+$fontSizePc24: 2.4rem;
+$fontSizePc25: 2.5rem;
+$fontSizePc26: 2.6rem;
+$fontSizePc27: 2.7rem;
+$fontSizePc28: 2.8rem;
+$fontSizePc30: 3rem;
+
+/*--------------------------------
+  Font Color
+--------------------------------*/
+/*------ General -------*/
+$whiteColor: #fff;
+$blackColor: #000;
+$blackColor2: #3e3e3e;
+$baseFontColor: #333;
+$transparentColor: transparent;
+
+/*------ Gray -------*/
+$grayColor1: #f6f7f8;
+$grayColor2: #c7c7c7;
+$grayColor3: #7e7e7e;
+
+/*------ Link -------*/
+
+
+$mainColor1: #e34c26;
+$mainColor2: #3cb3e4;

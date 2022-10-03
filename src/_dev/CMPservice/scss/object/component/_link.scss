@@ -1,0 +1,166 @@
+/* --------------------------------------------------------------------------
+
+    Link
+
+   -------------------------------------------------------------------------- */
+/* Page top
+   ========================================================================== */
+.c-linkAnchorTop {
+  position: fixed;
+  right: calc(24 / 720 * 100vw);
+  bottom: 10px;
+  z-index: 98;
+  width: calc(68 / 720 * 100vw);
+  height: calc(68 / 720 * 100vw);
+  border-radius: 50%;;
+  background-color: $alphaColor2;
+
+  &.is-reachDown {
+    bottom: calc(-40 / 720 * 100vw);
+
+    @include tab {
+      bottom: -25px;
+    }
+  }
+
+  @include tab {
+    right: 20px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    transition: opacity .3s ease;
+
+    &:hover, &:focus {
+      opacity: .7;
+    }
+  }
+
+  @include pc {
+    transition: background-color .3s ease;
+
+    &:hover, &:focus {
+      background-color: $linkHover;
+    }
+  }
+
+  [data-script-enabled="true"] & {
+      display: none;
+
+      &.is-scrollActive {
+        display: block;
+      }
+      &.is-reachDown {
+        position: absolute;
+      }
+  }
+
+  html:not([data-script-enabled="true"]) & {
+    display: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: calc(30 / 720 * 100vw);
+    left: 0;
+    right: 0;
+    z-index: 99;
+    margin: 0 auto;
+    width: calc(16 / 720 * 100vw);
+    height: calc(16 / 720 * 100vw);
+    border-top: calc(3 / 720 * 100vw) solid $grayColor9;
+    border-left: calc(3 / 720 * 100vw) solid $grayColor9;
+    transform: rotate(45deg);
+
+    @include tab {
+      top: 20px;
+      width: 12px;
+      height: 12px;
+      border-width: 2px;
+    }
+    @include pc {
+      transition: border-color .3s ease;
+    }
+  }
+  @include pc {
+    &:hover::before, &:focus::before {
+      border-color: $whiteColor;
+    }
+  }
+
+  > span {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  &Wrap {
+    position: relative;
+  }
+}
+
+/* Blank Icon
+   ========================================================================== */
+.c-iconBlank {
+  margin: 0 0 0 calc(12 / 720 * 100vw);
+  display: inline-block;
+  width: calc(24 / 720 * 100vw);
+  height: calc(24 / 720 * 100vw);
+  position: relative;
+  top: .1em;
+  fill: $baseFontColor1;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+
+  @include tab {
+    margin-left: 6px;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+  }
+
+  @include pc {
+    transition: fill .3s ease;
+
+    a:hover &, a:focus & {
+      fill: $linkHover;
+    }
+  }
+}
+
+/* Link Txt
+   ========================================================================== */
+.c-linkTxt {
+  margin: calc(55 / 720 * 100vw) 0 0;
+  @include fontSizeSmall;
+
+  ._thirdparty & {
+    margin-top: calc(20 / 720 * 100vw);
+  }
+
+  @include tab {
+    margin-top: 10px;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: underline;
+  }
+
+  .c-lytComTitle + & {
+    margin-top: calc(55 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 10px;
+    }
+  }
+
+  .c-lytComTitle._desc + & {
+    margin-top: calc(55 / 720 * 100vw);
+
+    @include tab {
+      margin-top: 20px;
+      margin-right: 35px;
+    }
+  }
+}

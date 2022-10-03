@@ -1,0 +1,39 @@
+/*--------------------------------
+  Normal
+--------------------------------*/
+.c-tbl {
+  width: 100%;
+  font-size: 13px;
+  border-collapse: collapse;
+  border: 2px solid #333;
+  @include tab {
+    font-size: 16px;
+  }
+
+  @include sp {
+    &-scroll {
+      overflow: auto;
+      white-space: nowrap;
+      .c-tbl {
+        width: 500px;
+      }
+    }
+  }
+
+  &__item {
+    padding: 10px 15px;
+    border: 1px solid #000;
+  }
+
+  &__head {
+    background-color: #dfdfdf;
+
+    .c-tbl__item {
+      border-bottom-width: 2px;
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+  }
+}
